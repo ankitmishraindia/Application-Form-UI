@@ -11,10 +11,10 @@
     <nav class="navbar navbar-expand-lg position-sticky top-0 z-1 bg-white" style="height: 10vh;">
       <div class="container-fluid">
         <a class="navbar-brand" style="height: 60px;" href="#">
-          <img src="./mnj.png" class="img-fluid h-100" alt="">
+          <img src="./assets/mnj.png" class="img-fluid h-100" alt="">
         </a>
         <a class="navbar-brand text-info fw-bold" href="#">
-          APPLICATION FORM
+         MNJ Software Pvt. Ltd.
         </a>
       </div>
     </nav>
@@ -38,7 +38,7 @@
         </div>
         <!-------------------------main bar--------  -->
       <div class="h-75 h-sm-50 rounded">
-        <img src="./pexels-photo-7979431.webp" class="mw-100 mh-100 rounded" alt="">
+        <img src="/assets/pexels-photo-7979431.webp" class="mw-100 mh-100 rounded" alt="">
       </div>
       
         
@@ -50,8 +50,23 @@
           <form>
             <!----personal details section -->
             <h3 class="">Personal Details:</h3>
+            
             <div class="container rounded-3  bg-white p-2 " >
-              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
+              <!-- profile image -->
+              
+              <div class="d-flex justify-content-between align-items-center">
+                <p>Applicant's Image:</p>
+                <div class="d-flex flex-column justify-content-center gap-2 ">
+                 
+                <label style="width: 90px;" for="profileimage">
+                    <img src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="img-fluid " alt="">
+                </label> 
+                
+                <input type="file" accept=".jpeg,.jpg,.webp,.png" id="profileimage">
+                </div>
+                
+              </div>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
                   <label for="firstname" class="form-label">First Name</label>
                   <input type="text" class="form-control bg-info-subtle" id="firstname">
@@ -110,7 +125,27 @@
                   <label for="birthplace" class="form-label">Place of Birth</label>
                   <input type="text" class="form-control bg-info-subtle" id="birthplace">
                 </div>
+                <div class="mb-1 ">
+                  <label for="telephone" class="form-label">Telephone</label>
+                  <input type="number" class="form-control bg-info-subtle" id="telephone">
+                </div>
+                <div class="mb-1 ">
+                  <label for="mobile" class="form-label">Mobile</label>
+                    <input type="number" class="form-control bg-info-subtle col-6" id="mobile" minlength="10" maxlength="10">
+                  
+                </div>
+                <div class="mb-1 ">
+                  <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control bg-info-subtle col-6" id="email">
+                  
+                </div>
                  
+              </div>
+              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 mt-2 ">
+                <div class="mb-1 ">
+                  <label for="houseno" class="form-label">Instant Messaging ID</label>
+                  <input type="text" class="form-control bg-info-subtle" id="houseno">
+                </div>
               </div>
             </div>
 
@@ -181,20 +216,7 @@
                   <label for="periodstay" class="form-label">Period of Stay</label>
                   <input type="text" class="form-control bg-info-subtle" id="periodstay">
                 </div>
-                <div class="mb-1 ">
-                  <label for="telephone" class="form-label">Telephone</label>
-                  <input type="number" class="form-control bg-info-subtle" id="telephone">
-                </div>
-                <div class="mb-1 ">
-                  <label for="mobile" class="form-label">Mobile</label>
-                    <input type="number" class="form-control bg-info-subtle col-6" id="mobile" minlength="10" maxlength="10">
-                  
-                </div>
-                <div class="mb-1 ">
-                  <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control bg-info-subtle col-6" id="email">
-                  
-                </div>
+                
               </div>
 
               <!--permanent address section-->
@@ -263,27 +285,91 @@
                   <label for="periodstay" class="form-label">Period of Stay</label>
                   <input type="text" class="form-control bg-info-subtle" id="periodstay">
                 </div>
+                
+              </div>
+              
+            </div> 
+              <!---- ---Passport section------->
+
+             
+            <h3 class="mt-4">Passport Details:</h3>
+            <div class="container rounded-3  bg-white p-2 " >
+              <div class="d-flex justify-content-between">
+                <div>
+                  <input type="radio" name="passport" id="available">
+                  <label for="available">Available</label>
+                </div>
+                <div>
+                  <input type="radio" name="passport" id="notavailable">
+                  <label for="notavailable">Not Available</label>
+                </div>
+                <div>
+                  <input type="radio" name="passport" id="applied">
+                  <label for="applied">Applied</label>
+                </div>
+                 
+              </div>
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
-                  <label for="telephone" class="form-label">Telephone</label>
-                  <input type="number" class="form-control bg-info-subtle" id="telephone">
+                  <label for="passportno" class="form-label">Number</label>
+                  <input type="number" class="form-control bg-info-subtle" id="passportno">
                 </div>
                 <div class="mb-1 ">
-                  <label for="mobile" class="form-label">Mobile</label>
-                    <input type="number" class="form-control bg-info-subtle col-6" id="mobile" minlength="10" maxlength="10">
-                  
+                  <label for="issuedate" class="form-label">Date of Issue</label>
+                  <input type="date" class="form-control bg-info-subtle" id="issuedate">
                 </div>
                 <div class="mb-1 ">
-                  <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control bg-info-subtle col-6" id="email">
-                  
+                  <label for="expirydate" class="form-label">Date of Expiry</label>
+                  <input type="date" class="form-control  bg-info-subtle" id="expirydate">
+                </div>
+                <div class="mb-1 ">
+                  <label for="issueplace" class="form-label">Place Issue</label>
+                  <input type="text" class="form-control bg-info-subtle" id="issueplace">
+                </div>
+                
+                
+              </div>
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+                <div class="mb-1 ">
+                  <label for="visa" class="form-label">Do you have valid Visa?</label>
+                </div>
+                <div>
+                  <select class="form-select bg-info-subtle" name="" id="visa">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
                 </div>
               </div>
-              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 mt-2 ">
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
-                  <label for="houseno" class="form-label">Instant Messaging ID</label>
-                  <input type="text" class="form-control bg-info-subtle" id="houseno">
+                  <label for="visatype" class="form-label">Type of Visa</label>
+                </div>
+                <div>
+                  <select class="form-select bg-info-subtle" name="" id="visatype">
+                    <option value="">Select Visa type</option>
+                    <option value="student">Student</option>
+                    <option value="employment">Employment</option>
+                    <option value="tourist">Tourist</option>
+                    <option value="buisness">Buisness</option>
+                  </select>
                 </div>
               </div>
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+                <div class="mb-1 ">
+                  <label for="visa" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
+                </div>
+                <div>
+                  <select class="form-select bg-info-subtle" name="" id="visa">
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+              
+              
             </div> 
 
           </form>
