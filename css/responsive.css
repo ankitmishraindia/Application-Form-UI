@@ -5,6 +5,8 @@
 }
 
 
+
+
 /* Hide the sidebar on extra small screens */
 
 
@@ -13,5 +15,22 @@
     .content {
       margin-left: 0;
       width: 100%;
+    }
+  }
+
+@media (min-width:1500px) {
+    
+    .content {
+      margin-left: 35%;
+      width: 100%;
+    }
+  }
+
+@media (min-width:575.98) {
+    
+    #sidebar {
+      
+      width: 25%;
+      
     }
   }
