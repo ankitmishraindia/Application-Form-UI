@@ -1,0 +1,17 @@
+.content{
+    margin-left: 25%;
+    min-height: 90vh;
+    width: 75%;
+}
+
+
+/* Hide the sidebar on extra small screens */
+
+
+@media (max-width: 575.98px) {
+    
+    .content {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
