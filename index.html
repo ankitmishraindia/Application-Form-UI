@@ -29,7 +29,7 @@
     <div class="">
       <!-- ------------------------left Sidebar----------- -->
       <div id="sidebar"  class="container-fluid w-25 position-fixed z-2 bg-body overflow-y-auto start-0 d-none d-sm-block " style="height: 90vh;">
-      <div class="h-50  rounded border d-sm-none d-lg-block">
+      <div class="h-50  rounded border d-sm-none d-md-block">
         <img src="/assets/0aside.webp" class="h-100 w-100 rounded" alt="">
       </div>
       <button id="close" class="d-sm-none position-absolute end-0  bg-dark-subtle btn d-flex align-items-center justify-content-center  top-0 z-3" >
@@ -37,7 +37,7 @@
       </button>
       
       <div class="h-50 ">
-        <p style="text-align: justify;" class="fw-bold text-body-secondary mb-1 d-none d-md-block d-xl-block">Thank you for the interest shown in MNJ Software. 
+        <p style="text-align: justify;" class="fw-bold text-body-secondary mb-1 ">Thank you for the interest shown in MNJ Software. 
             </p>
         <p  class="fw-bold text-body-secondary mb-0">Please follow instructions:
             </p>
@@ -71,11 +71,11 @@
                 <p>Applicant's Image:</p>
                 <div class="d-flex flex-column justify-content-center gap-2 ">
                  
-                <label style="width: 90px;" for="profileimage">
-                    <img src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="img-fluid " alt="">
+                <label class="rounded-4 border" style="width: 90px;height: 100px;" for="profileimage">
+                    <img id="preview" src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="h-100 w-100 rounded-4 " alt="">
                 </label> 
                 
-                <input type="file" accept=".jpeg,.jpg,.webp,.png" id="profileimage">
+                <input type="file" onchange="previewImage(event)" accept="imgae/*" id="profileimage">
                 </div>
                 
               </div>
@@ -161,8 +161,6 @@
                 </div>
               </div>
             </div>
-
-
 
               <!-- ---address section------->
 
@@ -499,7 +497,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>
@@ -514,7 +512,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>
@@ -529,7 +527,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>
@@ -544,7 +542,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>
@@ -559,7 +557,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>
@@ -574,7 +572,7 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control  bg-info-subtle" id="expirydate">
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
                  </div>
                 
                </div>

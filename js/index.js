@@ -17,3 +17,20 @@ close.addEventListener('click',()=>{
    sidebar.classList.add('w-25')
    sidebar.classList.remove('w-50')
 })
+
+
+// Image uploading preview
+function previewImage(event){
+    let input=event.target;
+    let preview=document.getElementById('preview')
+    let file=input.files[0]
+
+    if(file){
+        let reader=new FileReader()
+        reader.onload=function(){
+            preview.src=reader.result;
+        }
+        reader.readAsDataURL(file)
+    }
+}
+
