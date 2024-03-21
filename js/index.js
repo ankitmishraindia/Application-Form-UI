@@ -34,3 +34,34 @@ function previewImage(event){
     }
 }
 
+//set value of present address to permanent address by checkbox
+const housenoPresent=document.getElementById('housenopst')
+const localityPresent=document.getElementById('localitypst')
+const statePresent=document.getElementById('statepst')
+const pincodePresent=document.getElementById('pincodepst')
+const stayPresent=document.getElementById('periodstaypst')
+
+const sameAsPresentCheck=document.getElementById('sameaddress')
+
+let housenoPrmnt=document.getElementById('housenoPmnt')
+let localityPmnt=document.getElementById('localityPmnt')
+let statePmnt=document.getElementById('statePmnt')
+let pincodePmnt=document.getElementById('pincodePmnt')
+let stayPmnt=document.getElementById('periodstayPmnt')
+
+sameAsPresentCheck.addEventListener('change',function(){
+    if(this.checked){
+        housenoPrmnt.value=housenoPresent.value;
+        localityPmnt.value=localityPresent.value;
+        statePmnt.value=statePresent.value;
+        pincodePmnt.value=pincodePresent.value;
+        stayPmnt.value=stayPresent.value;
+       
+    }else{
+        housenoPrmnt.value="";
+        localityPmnt.value="";
+        statePmnt.value="";
+        pincodePmnt.value="";
+        statePmnt.value="";
+    }
+})
