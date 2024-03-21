@@ -65,3 +65,41 @@ sameAsPresentCheck.addEventListener('change',function(){
         statePmnt.value="";
     }
 })
+
+//open passpost details only after applied check///////////
+const availableRadio=document.getElementById('available')
+const notAvilableRadio=document.getElementById('notavailable')
+const appliedRadio=document.getElementById('applied')
+
+const visaOption=document.getElementById('visa')
+
+const passportDetailBox=document.getElementById('passportDetail')
+const visaBox=document.getElementById('visaBox')
+const visaInfoBox=document.getElementsByClassName('visaInfo')
+
+availableRadio.addEventListener('change',passportBoxtoggle)
+notAvilableRadio.addEventListener('change',passportBoxtoggle)
+appliedRadio.addEventListener('change',passportBoxtoggle)
+ 
+//function for select visa availability
+visaOption.addEventListener('change',function(){
+    if(this.value==='yes'){
+        visaInfoBox[0].classList.remove('d-none')
+        visaInfoBox[1].classList.remove('d-none')
+        
+    }else{
+        visaBox[0].classList.add('d-none')
+        visaBox[1].classList.add('d-none')
+    }
+})
+   
+//
+function passportBoxtoggle(){
+    if(availableRadio.checked){
+        passportDetailBox.classList.remove('d-none')
+        visaBox.classList.remove('d-none')
+   }else{
+           passportDetailBox.classList.add('d-none')
+           visaBox.classList.add('d-none')
+   }
+}

@@ -118,7 +118,7 @@
                   </select>
                 </div>
                 <div class="mb-1">
-                  <label for="maritalstatus" class="form-label">Sex</label>
+                  <label for="maritalstatus" class="form-label">Marital Status</label>
                   <select class="form-select bg-info-subtle" name="" id="maritalstatus">
                     <option selected>Select Marital..</option>
                     <option value="married">Married</option>
@@ -132,7 +132,7 @@
                 </div>
                 <div class="mb-1">
                   <label for="dob" class="form-label">Date of Birth</label>
-                  <input type="date" class="form-control bg-info-subtle" id="pannumber">
+                  <input type="date" class="form-control bg-info-subtle" id="dob">
                 </div>
                 <div class="mb-1">
                   <label for="birthplace" class="form-label">Place of Birth</label>
@@ -149,7 +149,7 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control bg-info-subtle col-6" id="email">
+                    <input type="email" class="form-control bg-info-subtle col-6" id="email" autocomplete='off'>
                   
                 </div>
                  
@@ -306,13 +306,13 @@
              
             <h3 class="mt-4">Passport Details:</h3>
             <div class="container rounded-3  bg-white p-2 " >
-              <div class="d-flex flex-column  d-sm-flex justify-content-between">
+              <div class="d-sm-flex justify-content-between">
                 <div>
                   <input type="radio" name="passport" id="available">
                   <label for="available">Available</label>
                 </div>
                 <div>
-                  <input type="radio" name="passport" id="notavailable">
+                  <input type="radio" name="passport" id="notavailable" checked>
                   <label for="notavailable">Not Available</label>
                 </div>
                 <div>
@@ -321,7 +321,7 @@
                 </div>
                  
               </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="passportDetail">
                 <div class="mb-1 ">
                   <label for="passportno" class="form-label">Number</label>
                   <input type="number" class="form-control bg-info-subtle" id="passportno">
@@ -341,7 +341,7 @@
                 
                 
               </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="visaBox">
                 <div class="mb-1 ">
                   <label for="visa" class="form-label">Do you have valid Visa?</label>
                 </div>
@@ -353,7 +353,7 @@
                   </select>
                 </div>
               </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none visaInfo">
                 <div class="mb-1 ">
                   <label for="visatype" class="form-label">Type of Visa</label>
                 </div>
@@ -367,12 +367,12 @@
                   </select>
                 </div>
               </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none visaInfo">
                 <div class="mb-1 ">
-                  <label for="visa" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
+                  <label for="travel" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
                 </div>
                 <div>
-                  <select class="form-select bg-info-subtle" name="" id="visa">
+                  <select class="form-select bg-info-subtle" id="travel" >
                     <option value="">Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -388,29 +388,29 @@
               
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
-                  <label for="firstlanguage" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="firstlanguage">
+                  <label for="lan2" class="form-label">Language</label>
+                  <input type="text" class="form-control bg-info-subtle" id="lan2">
                 </div>
                 <div class="d-flex gap-1">
                     <div class="mb-1 ">
-                    <label for="read" class="form-label">Read</label>
-                    <select class="form-select bg-info-subtle" name="" id="read">
+                    <label for="lan2read" class="form-label">Read</label>
+                    <select class="form-select bg-info-subtle" name="" id="lan2read">
                       <option value="">Select</option>
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
                     </select>
                     </div>
                     <div class="mb-1 ">
-                      <label for="write" class="form-label">Write</label>
-                      <select class="form-select bg-info-subtle" name="" id="write">
+                      <label for="lan2write" class="form-label">Write</label>
+                      <select class="form-select bg-info-subtle" name="" id="lan2write">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                       </select>
                     </div>
                     <div class="mb-1 ">
-                      <label for="speak" class="form-label">Speak</label>
-                      <select class="form-select bg-info-subtle" name="" id="speak">
+                      <label for="lan2speak" class="form-label">Speak</label>
+                      <select class="form-select bg-info-subtle" name="" id="lan2speak">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -421,29 +421,29 @@
               </div>
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
-                  <label for="firstlanguage" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="firstlanguage">
+                  <label for="lan1" class="form-label">Language</label>
+                  <input type="text" class="form-control bg-info-subtle" id="lan1">
                 </div>
                 <div class="d-flex gap-1 ">
                     <div class="mb-1 ">
-                    <label for="read" class="form-label">Read</label>
-                    <select class="form-select bg-info-subtle" name="" id="read">
+                    <label for="lan1read" class="form-label">Read</label>
+                    <select class="form-select bg-info-subtle" name="" id="lan1read">
                       <option value="">Select</option>
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
                     </select>
                     </div>
                     <div class="mb-1 ">
-                      <label for="write" class="form-label">Write</label>
-                      <select class="form-select bg-info-subtle" name="" id="write">
+                      <label for="lan1write" class="form-label">Write</label>
+                      <select class="form-select bg-info-subtle" name="" id="lan1write">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                       </select>
                     </div>
                     <div class="mb-1 ">
-                      <label for="speak" class="form-label">Speak</label>
-                      <select class="form-select bg-info-subtle" name="" id="speak">
+                      <label for="lan1speak" class="form-label">Speak</label>
+                      <select class="form-select bg-info-subtle" name="" id="lan1speak">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -461,118 +461,118 @@
              <div class="container rounded-3  bg-white p-2 " >
                <div class="d-flex flex-wrap justify-content-between ">
                  <div>
-                   <input type="checkbox" name="" id="available">
-                   <label for="available">Father</label>
+                   <input type="checkbox"  id="fatherchk">
+                   <label for="fatherchk">Father</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="notavailable">
-                   <label for="notavailable">Mother</label>
+                   <input type="checkbox" name="" id="motherchk">
+                   <label for="motherchk">Mother</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="applied">
-                   <label for="applied">Spouse</label>
+                   <input type="checkbox" name="" id="spouse">
+                   <label for="spouse">Spouse</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="applied">
-                   <label for="applied">Child</label>
+                   <input type="checkbox" name="" id="child">
+                   <label for="child">Child</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="applied">
-                   <label for="applied">Brother</label>
+                   <input type="checkbox" name="" id="bro">
+                   <label for="bro">Brother</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="applied">
-                   <label for="applied">Sister</label>
+                   <input type="checkbox" name="" id="sister">
+                   <label for="sister">Sister</label>
                  </div>
                   
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Father:</label>
+                   <label for="fname" class="form-label">Father:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="fname" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="fname">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="fage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="fage">
                  </div>
                 
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Mother:</label>
+                   <label for="mname" class="form-label">Mother:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="mname" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="mname">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="mage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="mage">
                  </div>
                 
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Spouse:</label>
+                   <label for="spousename" class="form-label">Spouse:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="spousename" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="spousename">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="spouseage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="spouseage">
                  </div>
                 
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Child:</label>
+                   <label for="childname" class="form-label">Child:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="childname" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="childname">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="childage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="childage">
                  </div>
                 
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Brother:</label>
+                   <label for="broname" class="form-label">Brother:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="broname" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="broname">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="broage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="broage">
                  </div>
                 
                </div>
                <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
                  <div class="mb-1 d-sm-none d-md-block">
-                   <label for="passportno" class="form-label">Sister:</label>
+                   <label for="sisname" class="form-label">Sister:</label>
                    
                  </div>
                  <div class="mb-1 ">
-                   <label for="issuedate" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="issuedate">
+                   <label for="sisname" class="form-label">Name</label>
+                   <input type="text" class="form-control bg-info-subtle" id="sisname">
                  </div>
                  <div class="mb-1 ">
-                   <label for="expirydate" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="expirydate">
+                   <label for="sisage" class="form-label">Age</label>
+                   <input type="number" class="form-control w-50 bg-info-subtle" id="sisage">
                  </div>
                 
                </div>
