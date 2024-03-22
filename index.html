@@ -75,26 +75,26 @@
                     <img id="preview" src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="h-100 w-100 rounded-4 " alt="">
                 </label> 
                 
-                <input type="file" onchange="previewImage(event)" accept="imgae/*" id="profileimage">
+                <input type="file"  accept=".jpg,.jpeg,.png,.webp" id="profileimage">
                 </div>
                 
               </div>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <div class="mb-1 ">
-                  <label for="firstname" class="form-label">First Name</label>
-                  <input type="text" class="form-control bg-info-subtle" id="firstname">
+                <div class="mb-1">
+                  <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
+                  <input type="text" class="form-control bg-info-subtle" id="firstname" required>
                 </div>
                 <div class="mb-1">
-                  <label for="lastname" class="form-label">Last Name</label>
-                  <input type="text" class="form-control bg-info-subtle" id="lastname">
+                  <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
+                  <input type="text" class="form-control bg-info-subtle" id="lastname" required>
                 </div>
                 <div class="mb-1">
-                  <label for="father" class="form-label">Father's Name</label>
-                  <input type="text" class="form-control bg-info-subtle" id="father">
+                  <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
+                  <input type="text" class="form-control bg-info-subtle" id="father" required>
                 </div>
                 <div class="mb-1">
-                  <label for="mother" class="form-label">Mother's Name</label>
-                  <input type="text" class="form-control bg-info-subtle" id="mother">
+                  <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
+                  <input type="text" class="form-control bg-info-subtle" id="mother" required>
                 </div>
                 <div class="mb-1">
                   <label for="nationality" class="form-label">Nationality</label>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="mb-1">
                   <label for="sex" class="form-label">Sex</label>
-                  <select class="form-select bg-info-subtle" name="" id="sex">
+                  <select class="form-select bg-info-subtle" name="" id="sex" >
                     <option selected>Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -156,10 +156,11 @@
               </div>
               <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 mt-2 ">
                 <div class="mb-1 ">
-                  <label for="houseno" class="form-label">Instant Messaging ID</label>
-                  <input type="text" class="form-control bg-info-subtle" id="houseno">
+                  <label for="instantmessage" class="form-label">Instant Messaging ID</label>
+                  <input type="text" class="form-control bg-info-subtle" id="instantmessage">
                 </div>
               </div>
+              
             </div>
 
               <!-- ---address section------->
@@ -308,15 +309,15 @@
             <div class="container rounded-3  bg-white p-2 " >
               <div class="d-sm-flex justify-content-between">
                 <div>
-                  <input type="radio" name="passport" id="available">
+                  <input type="radio" name="passport" id="available" role="button">
                   <label for="available">Available</label>
                 </div>
                 <div>
-                  <input type="radio" name="passport" id="notavailable" checked>
+                  <input type="radio" name="passport" id="notavailable" checked role="button">
                   <label for="notavailable">Not Available</label>
                 </div>
                 <div>
-                  <input type="radio" name="passport" id="applied">
+                  <input type="radio" name="passport" id="applied" role="button">
                   <label for="applied">Applied</label>
                 </div>
                  
@@ -461,32 +462,32 @@
              <div class="container rounded-3  bg-white p-2 " >
                <div class="d-flex flex-wrap justify-content-between ">
                  <div>
-                   <input type="checkbox"  id="fatherchk">
+                   <input type="checkbox" class="family-checkbox" id="fatherchk">
                    <label for="fatherchk">Father</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="motherchk">
+                   <input type="checkbox" class="family-checkbox" id="motherchk">
                    <label for="motherchk">Mother</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="spouse">
+                   <input type="checkbox" class="family-checkbox" id="spouse">
                    <label for="spouse">Spouse</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="child">
+                   <input type="checkbox" class="family-checkbox" id="child">
                    <label for="child">Child</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="bro">
+                   <input type="checkbox" class="family-checkbox" id="bro">
                    <label for="bro">Brother</label>
                  </div>
                  <div>
-                   <input type="checkbox" name="" id="sister">
+                   <input type="checkbox" class="family-checkbox" id="sister">
                    <label for="sister">Sister</label>
                  </div>
                   
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none family-info">
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="fname" class="form-label">Father:</label>
                    
@@ -501,7 +502,7 @@
                  </div>
                 
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none  family-info" >
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="mname" class="form-label">Mother:</label>
                    
@@ -516,7 +517,7 @@
                  </div>
                 
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none  family-info">
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="spousename" class="form-label">Spouse:</label>
                    
@@ -531,7 +532,7 @@
                  </div>
                 
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none  family-info">
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="childname" class="form-label">Child:</label>
                    
@@ -546,7 +547,7 @@
                  </div>
                 
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none  family-info">
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="broname" class="form-label">Brother:</label>
                    
@@ -561,7 +562,7 @@
                  </div>
                 
                </div>
-               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3">
+               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none  family-info">
                  <div class="mb-1 d-sm-none d-md-block">
                    <label for="sisname" class="form-label">Sister:</label>
                    
@@ -577,8 +578,12 @@
                 
                </div>
              </div>
-             <button class="btn btn-primary mt-3" type="submit">Submit</button>
-             <button class="btn btn-primary mt-3" type="reset">Reset</button>
+             <div>&ast;Required fields.</div>
+             <div>
+              <button class="btn btn-primary mt-3" type="submit">Submit</button>
+              <button class="btn btn-primary mt-3" type="reset">Reset</button>
+             </div>
+             
           </form>
           
       </div>

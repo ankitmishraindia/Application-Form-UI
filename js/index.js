@@ -1,4 +1,5 @@
-// Give functionality to sidebar is small screen to toggle by menu icon
+document.addEventListener('DOMContentLoaded',function(){
+    // Give functionality to sidebar is small screen to toggle by menu icon
 const sidebar=document.getElementById('sidebar');
 const menu=document.getElementById('menu')
 
@@ -19,7 +20,7 @@ close.addEventListener('click',()=>{
 })
 
 
-// Image uploading preview
+// /////Image uploading preview
 function previewImage(event){
     let input=event.target;
     let preview=document.getElementById('preview')
@@ -33,8 +34,13 @@ function previewImage(event){
         reader.readAsDataURL(file)
     }
 }
+const profileImageInput=document.getElementById('profileimage')
+profileImageInput.addEventListener('change',previewImage)
 
-//set value of present address to permanent address by checkbox
+
+
+
+//////set value of present address to permanent address by checkbox
 const housenoPresent=document.getElementById('housenopst')
 const localityPresent=document.getElementById('localitypst')
 const statePresent=document.getElementById('statepst')
@@ -102,4 +108,16 @@ function passportBoxtoggle(){
            passportDetailBox.classList.add('d-none')
            visaBox.classList.add('d-none')
    }
+}
+})
+
+/////family show info if checkbox is checked
+const familyCheckInput=document.getElementsByClassName('family-checkbox')
+const familyInfoBox=document.getElementsByClassName('family-info')
+
+for(let i=0;i<6;i++){
+    familyCheckInput[i].addEventListener('change',function(){
+        if(this.checked)
+        familyInfoBox[i].classList.remove('d-none')
+    })
 }
