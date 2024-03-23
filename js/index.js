@@ -93,10 +93,13 @@ visaOption.addEventListener('change',function(){
         visaInfoBox[0].classList.remove('d-none')
         visaInfoBox[1].classList.remove('d-none')
         
-    }else{
-        visaBox[0].classList.add('d-none')
-        visaBox[1].classList.add('d-none')
     }
+    if(this.value==='no'||this.value===''){
+        visaInfoBox[0].classList.add('d-none')
+        visaInfoBox[1].classList.add('d-none')
+        
+    }
+    
 })
    
 //
@@ -119,5 +122,8 @@ for(let i=0;i<6;i++){
     familyCheckInput[i].addEventListener('change',function(){
         if(this.checked)
         familyInfoBox[i].classList.remove('d-none')
+        else{
+            familyInfoBox[i].classList.add('d-none')
+        }
     })
 }
