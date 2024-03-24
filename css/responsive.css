@@ -1,4 +1,7 @@
 
+select{
+  cursor: pointer;
+}
 
 .poppins-regular {
   font-family: "Poppins", sans-serif;

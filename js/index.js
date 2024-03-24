@@ -112,7 +112,6 @@ function passportBoxtoggle(){
            visaBox.classList.add('d-none')
    }
 }
-})
 
 /////family show info if checkbox is checked
 const familyCheckInput=document.getElementsByClassName('family-checkbox')
@@ -127,3 +126,49 @@ for(let i=0;i<6;i++){
         }
     })
 }
+
+//form validation
+const form=document.getElementById('form')
+
+const formInput=document.getElementsByTagName('input')
+
+const errorMessage=document.getElementsByClassName('error')
+
+const selectInput=document.getElementsByTagName('select')
+
+form.addEventListener('submit',(event)=>{
+     event.preventDefault()
+     validateForm()
+})
+
+function validateForm(){
+    //set all errors to display none
+    for(let k=0;k<errorMessage.length;k++){
+        errorMessage[k].classList.add('d-none')
+        formInput[k].classList.remove('border-danger')
+    }
+    for(let i=1;i<5;i++)
+    if(formInput[i].value.trim()===''){
+        errorMessage[i].classList.remove('d-none')
+         errorMessage[i].innerHTML=`Required Field.`
+         formInput[i].classList.add('border-danger')
+         formInput[i].focus()
+         console.log(selectInput[0].value)
+         break;
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+})
+
