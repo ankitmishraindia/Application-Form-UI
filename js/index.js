@@ -139,6 +139,7 @@ const selectInput=document.getElementsByTagName('select')
 form.addEventListener('submit',(event)=>{
      event.preventDefault()
      validateForm()
+     
 })
 
 function validateForm(){
@@ -206,6 +207,7 @@ function validateForm(){
          return;
     }
     
+    window.location.href="./pages/success.html"
     
 }
 
