@@ -142,21 +142,69 @@ form.addEventListener('submit',(event)=>{
 })
 
 function validateForm(){
-    //set all errors to display none
+    //set all input errors to display none
     for(let k=0;k<errorMessage.length;k++){
         errorMessage[k].classList.add('d-none')
         formInput[k].classList.remove('border-danger')
     }
+    //set all select errors to display none
+    for(let k=0;k<selectInput.length;k++){
+        errorMessage[k].classList.add('d-none')
+        selectInput[k].classList.remove('border-danger')
+    }
+
+
+    //set first four input field error message
     for(let i=1;i<5;i++)
     if(formInput[i].value.trim()===''){
         errorMessage[i].classList.remove('d-none')
          errorMessage[i].innerHTML=`Required Field.`
          formInput[i].classList.add('border-danger')
          formInput[i].focus()
-         console.log(selectInput[0].value)
-         break;
+         return;
+    }
+    //set error in sex select box
+    if(selectInput[1].value===''){
+        errorMessage[7].classList.remove('d-none')
+        errorMessage[7].innerHTML='please select sex';
+        selectInput[1].classList.add('border-danger')
+       selectInput[1].focus()
+       return false;
     }
 
+    //set error in mobile 
+    if(formInput[10].value===''){
+        errorMessage[13].classList.remove('d-none')
+         errorMessage[13].innerHTML=`Moblie number is required.`
+         formInput[10].classList.add('border-danger')
+         formInput[10].focus()
+         return;
+    }
+    if(formInput[10].value.length!==10){
+        errorMessage[13].classList.remove('d-none')
+         errorMessage[13].innerHTML=`Number must be 10 digit.`
+         formInput[10].classList.add('border-danger')
+         formInput[10].focus()
+         return;
+    }
+
+    //set error form email
+    if(formInput[11].value===''){
+        errorMessage[14].classList.remove('d-none')
+         errorMessage[14].innerHTML=`Email is required.`
+         formInput[11].classList.add('border-danger')
+         formInput[11].focus()
+         return;
+    }
+    if(!formInput[11].value.toLowerCase().match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )){
+        errorMessage[14].classList.remove('d-none')
+         errorMessage[14].innerHTML=`Enter a valid email.`
+         formInput[11].classList.add('border-danger')
+         formInput[11].focus()
+         return;
+    }
     
     
 }
