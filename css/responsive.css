@@ -3,6 +3,10 @@ select{
   cursor: pointer;
 }
 
+ol{
+  text-align: justify;
+}
+
 
 .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -38,6 +42,9 @@ input[type=number]::-webkit-outer-spin-button {
       margin-left: 0;
       width: 100%;
     }
+    h4{
+      font-size: 18px;
+    }
   }
 
 @media (min-width:1500px) {
@@ -55,4 +62,22 @@ input[type=number]::-webkit-outer-spin-button {
       width: 25%;
       
     }
+  }
+
+  /* blinking animation */
+  @keyframes blink {
+    0%{
+      color: red;
+    }
+    50%{
+      color: green;
+    }
+    100%{
+      color: blue;
+    }
+    
+  }
+
+  .blink{
+    animation: blink 1s infinite;
   }
