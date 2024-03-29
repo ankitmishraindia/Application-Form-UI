@@ -3,6 +3,7 @@ select{
   cursor: pointer;
 }
 
+
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -12,6 +13,10 @@ select{
     margin-left: 25%;
     min-height: 90vh;
     width: 75%;
+}
+
+nav{
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* hide arrow from input type=number */

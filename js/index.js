@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded',function(){
+
+    //navbar scrolling effect
+    const navbar=document.getElementsByTagName('nav');
+
+    function navScrollEffect(){
+        if(document.body.scrollTop>10||document.documentElement.scrollTop>10){
+            navbar[0].classList.add('bg-info');
+            navbar[0].classList.add('shadow-sm');
+            document.getElementById('navText').classList.add('text-white')
+            document.getElementById('navText').classList.remove('text-info')
+        }else{
+            navbar[0].classList.remove('bg-info')
+            navbar[0].classList.remove('shadow-sm')
+            document.getElementById('navText').classList.add('text-info')
+            document.getElementById('navText').classList.remove('text-white')
+        }
+    }
+
+    window.onscroll=()=>navScrollEffect()
     // Give functionality to sidebar is small screen to toggle by menu icon
 const sidebar=document.getElementById('sidebar');
 const menu=document.getElementById('menu')
