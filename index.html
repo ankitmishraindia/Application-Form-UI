@@ -35,7 +35,7 @@
       <button id="close" class="d-sm-none position-absolute text-danger end-0  bg-transparent btn d-flex align-items-center justify-content-center  top-0 z-3" >
         <i class="fa-solid fa-xmark fw-bold "></i>
       </button>
-      <div class="p-3 d-flex flex-column gap-2 ">
+      <div class="p-3 d-flex flex-column align-items-center gap-2 ">
         <button data-target="instructions" class="btn btn-info text-white fw-semibold">
           <i class="fa-regular fa-file-lines"></i>
           <span class="btn-Text d-flex d-sm-inline">Instructions</span></button>
@@ -50,7 +50,7 @@
           <span class="btn-Text d-flex d-sm-inline">Passport Info</span></button>
         <button data-target="language" class="btn btn-info text-white fw-semibold ">
           <i class="fa-solid fa-language"></i>
-          <span class="btn-Text d-flex d-sm-inline">Language</span></button>
+          <span class=" btn-Text d-flex d-sm-inline">Language</span></button>
         <button data-target="family" class="btn btn-info text-white fw-semibold ">
           <i class="fa-solid fa-people-group"></i>
           <span class="btn-Text d-flex d-sm-inline">Family Info</span> </button>
@@ -64,7 +64,7 @@
       <div class=" bg-info-subtle p-4 container content">
      
           <!--       Instructions part -------------- -->
-          <div id="instructions" style="min-height: 90vh;" class="d-flex  flex-column align-items-center justify-content-center gap-lg-3 gap-sm-2">
+          <div id="instructions" style="min-height: 50vh;" class="d-flex  flex-column align-items-center justify-content-center gap-lg-3 gap-sm-2">
             <h4 class="blink text-center">Thank you for the interest shown in MNJ Software.
               </h4>
               <h4 style="text-align: justify;"> Please take a few minutes of your time to fill in the following details to help us understand your technical skills and personal competencies better.
@@ -630,12 +630,14 @@
              </div>
              
           </form>
-          <div class="container-fluid d-flex  align-items-center justify-content-center" style="height: 90vh;">
+          <div class="container-fluid d-flex  align-items-center justify-content-center" style="height: 50vh;">
             <div class="p-5  text-center  text-success ">
               <h1>Thanks for visting us.</h1>
-              <img src="./assets/mnj.png" alt="">
+              <div class="w-100 " style="height: 200px;">
+                   <img class="h-100 w-100" src="./assets/mnj.png" alt="">
+              </div>
             </div>
-        </div>
+          </div>
       </div>
     </div>
      <script src="./js/index.js"></script>
