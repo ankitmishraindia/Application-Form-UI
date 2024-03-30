@@ -7,6 +7,10 @@ ol{
   text-align: justify;
 }
 
+#sidebar{
+  transition: background-color 0.4s linear;
+}
+
 
 .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -21,6 +25,7 @@ ol{
 
 nav{
   transition: background-color 0.3s ease-in-out;
+ 
 }
 
 /* hide arrow from input type=number */
