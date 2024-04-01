@@ -35,25 +35,25 @@
       <button id="close" class="d-sm-none position-absolute text-danger end-0  bg-transparent btn d-flex align-items-center justify-content-center  top-0 z-3" >
         <i class="fa-solid fa-xmark fw-bold "></i>
       </button>
-      <div class="p-3 d-flex flex-column align-items-center gap-2 ">
+      <div class="p-3 d-flex flex-column gap-2 ">
         <button data-target="instructions" class="btn btn-info text-white fw-semibold">
           <i class="fa-regular fa-file-lines"></i>
-          <span class="btn-Text d-flex d-sm-inline">Instructions</span></button>
-        <button data-target="personalDetails" class="btn btn-info text-white fw-semibold ">
+          <span class="btn-Text d-sm-inline">Instructions</span></button>
+        <button data-target="personalDetails" class="btn btn-info text-white fw-semibold">
           <i class="fa-solid fa-user"></i>
-          <span class="btn-Text d-flex d-sm-inline">Personal Details</span></button>
+          <span class="btn-Text d-sm-inline">Personal Details</span></button>
         <button data-target="address" class="btn btn-info text-white fw-semibold">
           <i class="fa-solid fa-location-dot"></i>
-          <span class="btn-Text d-flex d-sm-inline">Address</span></button>
-        <button data-target="passport" class="btn btn-info text-white fw-semibold ">
+          <span class="btn-Text d-sm-inline">Address</span></button>
+        <button data-target="passport" class="btn btn-info text-white fw-semibold">
           <i class="fa-solid fa-passport"></i>
-          <span class="btn-Text d-flex d-sm-inline">Passport Info</span></button>
-        <button data-target="language" class="btn btn-info text-white fw-semibold ">
+          <span class="btn-Text d-sm-inline">Passport Info</span></button>
+        <button data-target="language" class="btn btn-info text-white fw-semibold">
           <i class="fa-solid fa-language"></i>
-          <span class=" btn-Text d-flex d-sm-inline">Language</span></button>
-        <button data-target="family" class="btn btn-info text-white fw-semibold ">
+          <span class=" btn-Text d-sm-inline">Language</span></button>
+        <button data-target="family" class="btn btn-info text-white fw-semibold">
           <i class="fa-solid fa-people-group"></i>
-          <span class="btn-Text d-flex d-sm-inline">Family Info</span> </button>
+          <span class="btn-Text d-sm-inline">Family Info</span> </button>
         
       </div>
       
@@ -85,13 +85,12 @@
             
                 </li>
             </ol>
-            <button class="btn btn-dark ">Proceed</button>
+            <button data-target="personalDetails" class="btn btn-light fw-semibold text-info">Proceed</button>
           </div>
            <!-- -----form------------------- ---------->
           <form id="form" novalidate>
             <!----personal details section -->
-            <h3 id="personalDetails" class="">Personal Details:</h3>
-            
+            <h3 id="personalDetails" class=""><i class="fa-solid fa-user"></i> <span class="fs-4 ">Personal Details:</span></h3>
             <div class="container rounded-3 overflow-hidden  bg-white p-2 " >
               <!-- profile image -->
               
@@ -111,22 +110,22 @@
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
                 <div class="mb-3 position-relative">
                   <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="firstname">
+                  <input type="text" class="form-control bg-info-subtle" id="firstname" placeholder="ex. ANKIT">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="lastname">
+                  <input type="text" class="form-control bg-info-subtle" id="lastname" placeholder="ex. MISHRA">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="father">
+                  <input type="text" class="form-control bg-info-subtle" id="father" placeholder="ex. SHIV MISHRA">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="mother">
+                  <input type="text" class="form-control bg-info-subtle" id="mother" placeholder="ex. UMA MISHRA">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
@@ -165,33 +164,33 @@
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="pannumber" class="form-label">PAN Number</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pannumber" minlength="10" maxlength="10">
+                  <input type="text" class="form-control bg-info-subtle" id="pannumber" minlength="10" maxlength="10" placeholder="ex. CCZQM1117M">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="dob" class="form-label">Date of Birth</label>
-                  <input type="date" class="form-control bg-info-subtle" id="dob">
+                  <input type="date" class="form-control bg-info-subtle" id="dob" placeholder="ex. 02/12/2022">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative">
                   <label for="birthplace" class="form-label">Place of Birth</label>
-                  <input type="text" class="form-control bg-info-subtle" id="birthplace">
+                  <input type="text" class="form-control bg-info-subtle" id="birthplace" placeholder="ex. Babhnan">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative ">
                   <label for="telephone" class="form-label">Telephone</label>
-                  <input type="number" class="form-control bg-info-subtle" id="telephone">
+                  <input type="number" class="form-control bg-info-subtle" id="telephone" placeholder="ex. 0522 256635">
                   <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 <div class="mb-3 position-relative ">
                   <label for="mobile" class="form-label">Mobile<span class="text-info">&ast;</span></label>
-                    <input type="number"  class="form-control bg-info-subtle col-6" id="mobile" maxlength="10">
+                    <input type="number"  class="form-control bg-info-subtle col-6" id="mobile" maxlength="10" placeholder="ex. 9798566512">
                     <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                   
                 </div>
                 <div class="mb-3 position-relative ">
                   <label for="email" class="form-label">Email<span class="text-info">&ast;</span></label>
-                    <input type="email" class="form-control bg-info-subtle col-6" id="email" autocomplete='off'>
+                    <input type="email" class="form-control bg-info-subtle col-6" id="email" autocomplete='off' placeholder="ex. akita@gmail.com">
                     <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                   
                 </div>
@@ -210,17 +209,17 @@
               <!-- ---address section------->
 
               <!--Present Address-->
-            <h3 id="address" class="mt-4">Address:</h3>
+            <h3 id="address" class="mt-4"><i class="fa-solid fa-location-dot"></i> <span class="fs-4 ">Address:</span></h3>
             <div class="container rounded-3  bg-white p-2 " >
               <p class="fw-bold text-body-secondary ">Present Address:</p>
               <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
                   <label for="housenopst" class="form-label">House No.</label>
-                  <input type="text" class="form-control bg-info-subtle" id="housenopst">
+                  <input type="text" class="form-control bg-info-subtle" id="housenopst" placeholder="ex. 21B">
                 </div>
                 <div class="mb-1 ">
                   <label for="localitypst" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control bg-info-subtle" id="localitypst">
+                  <input type="text" class="form-control bg-info-subtle" id="localitypst" placeholder="ex. Babhnan-bazar">
                 </div>
                 <div class="mb-1 ">
                   <label for="statepst" class="form-label">State</label>
@@ -266,11 +265,11 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="pincodepst" class="form-label">Pincode</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pincodepst" minlength="6" maxlength="6">
+                  <input type="text" class="form-control bg-info-subtle" id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
                 </div>
                 <div class="mb-1 ">
                   <label for="periodstaypst" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control bg-info-subtle" id="periodstaypst">
+                  <input type="text" class="form-control bg-info-subtle" id="periodstaypst" placeholder="ex. 2 Months">
                 </div>
                 
               </div>
@@ -285,11 +284,11 @@
               <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
                   <label for="housenoPmnt" class="form-label">House No.</label>
-                  <input type="text" class="form-control bg-info-subtle" id="housenoPmnt">
+                  <input type="text" class="form-control bg-info-subtle" id="housenoPmnt" placeholder="ex. 21B">
                 </div>
                 <div class="mb-1 ">
                   <label for="localityPmnt" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control bg-info-subtle" id="localityPmnt">
+                  <input type="text" class="form-control bg-info-subtle" id="localityPmnt" placeholder="ex. Babhnan-Bazar">
                 </div>
                 <div class="mb-1 ">
                   <label for="statePmnt" class="form-label">State</label>
@@ -335,11 +334,11 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="pincodePmnt" class="form-label">Pincode</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pincodePmnt" minlength="6" maxlength="6">
+                  <input type="text" class="form-control bg-info-subtle" id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
                 </div>
                 <div class="mb-1 ">
                   <label for="periodstayPmnt" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control bg-info-subtle" id="periodstayPmnt">
+                  <input type="text" class="form-control bg-info-subtle" id="periodstayPmnt" placeholder="ex. 2 Months">
                 </div>
                 
               </div>
@@ -349,7 +348,7 @@
               <!---- ---Passport section------->
 
              
-            <h3 id="passport" class="mt-4">Passport Details:</h3>
+            <h3 id="passport" class="mt-4"><i class="fa-solid fa-passport"></i> <span class="fs-4 ">Passport Details:</span></h3>
             <div class="container rounded-3  bg-white p-2 " >
               <div class="d-sm-flex justify-content-between">
                 <div>
@@ -369,7 +368,7 @@
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="passportDetail">
                 <div class="mb-1 ">
                   <label for="passportno" class="form-label">Number</label>
-                  <input type="number" class="form-control bg-info-subtle" id="passportno">
+                  <input type="number" class="form-control bg-info-subtle" id="passportno" placeholder="ex. Z91449100">
                 </div>
                 <div class="mb-1 ">
                   <label for="issuedate" class="form-label">Date of Issue</label>
@@ -381,7 +380,7 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="issueplace" class="form-label">Place Issue</label>
-                  <input type="text" class="form-control bg-info-subtle" id="issueplace">
+                  <input type="text" class="form-control bg-info-subtle" id="issueplace" placeholder="Lucknow">
                 </div>
                 
                 
@@ -428,13 +427,13 @@
 
 
               <!---- ---Language section------->
-            <h3 id="language" class="mt-4">Languages:</h3>
+            <h3 id="language" class="mt-4"><i class="fa-solid fa-language"></i> <span class="fs-4 ">Languages:</span></h3>
             <div class="container rounded-3  bg-white p-2 " >
               
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
                   <label for="lan2" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="lan2">
+                  <input type="text" class="form-control bg-info-subtle" id="lan2" placeholder="ex. ENGLISH">
                 </div>
                 <div class="d-flex gap-1">
                     <div class="mb-1 ">
@@ -467,7 +466,7 @@
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
                   <label for="lan1" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="lan1">
+                  <input type="text" class="form-control bg-info-subtle" id="lan1" placeholder="ex. HINDI">
                 </div>
                 <div class="d-flex gap-1 ">
                     <div class="mb-1 ">
@@ -502,7 +501,7 @@
              <!---- ---family section------->
 
              
-             <h3 id="family" class="mt-4">Family Information:</h3>
+             <h3 id="family" class="mt-4"><i class="fa-solid fa-people-group"></i> <span class="fs-4 ">Family Details:</span></h3>
              <div class="container rounded-3  bg-white p-2 " >
                <div class="d-flex flex-wrap justify-content-between ">
                  <div>
