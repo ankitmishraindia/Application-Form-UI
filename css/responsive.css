@@ -9,6 +9,7 @@ ol{
 
 #sidebar{
   transition: background-color 0.4s linear;
+  
 }
 
 h3{
@@ -16,7 +17,7 @@ h3{
 }
 
 .btn-Text{
-  min-width: 200px;
+  min-width: 190px;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator{
@@ -48,6 +49,11 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+/* set sidebar buttons to active state */
+.btn.active{
+  background-color: green;
 }
 
 
@@ -99,3 +105,5 @@ input[type=number]::-webkit-outer-spin-button {
   .blink{
     animation: blink 1s infinite;
   }
+
+  

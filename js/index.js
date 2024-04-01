@@ -33,8 +33,7 @@ const menu=document.getElementById('menu')
 menu.addEventListener('click',()=>{
     sidebar.classList.remove('d-none')
     sidebar.classList.remove('w-25')
-    sidebar.classList.add('w-50')
-    
+    sidebar.classList.add('w-50') 
 })
 
 //give functionality to close button
@@ -240,10 +239,15 @@ function validateForm(){
 
 ///////////attach each sections to the sidebar buttons
 const buttons=document.getElementsByTagName('button')
-
+const buttonArray=Array.from(buttons)
 //click event
 for(let i=1;i<9;i++){
     buttons[i].addEventListener('click',function(){
+
+        //remove active class
+      buttonArray.forEach(btn=>btn.classList.remove('active'))
+
+        buttons[i].classList.add('active')
         // Get the target section ID
       const targetId = buttons[i].getAttribute('data-target');
 
