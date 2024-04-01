@@ -1,5 +1,5 @@
 # DETAILED APPLICATION FORM
-This is a complete application form for an applicant.
+This is a complete application form for an job seeker applicant.
 
 ### Segments of the application form
 - Personal Details
