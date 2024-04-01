@@ -16,9 +16,11 @@ h3{
   margin-top: 200px;
 }
 
+/* set sidebar button text */
 .btn-Text{
-  min-width: 190px;
+  margin-left: 10px;
 }
+
 
 input[type="date"]::-webkit-calendar-picker-indicator{
   cursor: pointer;
@@ -37,10 +39,6 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     width: 75%;
 }
 
-nav{
-  transition: background-color 0.3s ease-in-out;
- 
-}
 
 /* hide arrow from input type=number */
 input[type=number]::-webkit-inner-spin-button, 
@@ -53,7 +51,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* set sidebar buttons to active state */
 .btn.active{
-  background-color: green;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid green;
 }
 
 

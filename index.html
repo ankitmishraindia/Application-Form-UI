@@ -13,45 +13,37 @@
     <title>MNJ APPLICATION FORM</title>
   </head>
   <body class="poppins-regular">
-    <!--------------------------- Nav ------------------------------------->
-    <nav class="navbar navbar-expand-lg position-sticky bg-info  top-0 z-1" >
-      <div class="container-fluid">
-        <a class="navbar-brand" style="height: 60px;" href="#">
-          <img src="./assets/mnj.png" class="img-fluid h-100" alt="">
-        </a>
-        <button id="menu" class="navbar-toggler d-sm-none" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand fw-bold d-none d-sm-block text-white" id="navText" href="#">
-         MNJ Software Pvt. Ltd.
-        </a>
-      </div>
-    </nav>
+    
      <!-- ------------------------Main---------------------------------- -->
     <div class="">
       <!-- ------------------------left Sidebar----------- -->
-      <div id="sidebar"  class="container-fluid w-25 position-fixed z-2 bg-white  overflow-y-auto start-0 d-none d-sm-block " style="height: 90vh;">
-      
-      <button id="close" class="d-sm-none position-absolute text-danger end-0  bg-transparent btn d-flex align-items-center justify-content-center  top-0 z-3" >
-        <i class="fa-solid fa-xmark fw-bold "></i>
-      </button>
-      <div class="p-3 d-flex flex-column gap-2 ">
-        <button data-target="instructions" class="btn btn-info text-white fw-semibold">
-          <i class="fa-regular fa-file-lines"></i>
-          <span class="btn-Text d-sm-inline">Instructions</span></button>
-        <button data-target="personalDetails" class="btn btn-info text-white fw-semibold">
+      <div id="sidebar"  class="container-fluid w-25 py-3 position-fixed z-2 bg-white  overflow-y-auto start-0 d-none d-sm-block " style="height: 90vh;">
+        <a class="navbar-brand fw-bold fs-5" id="navText" href="#">
+          MNJ Software Pvt. Ltd.
+          </a>
+        <button id="close" class="d-sm-none position-absolute text-danger end-0  bg-transparent btn d-flex align-items-center justify-content-center  top-0 z-3" >
+          <i class="fa-solid fa-xmark fw-bold "></i>
+        </button>
+      <div class=" d-flex flex-column align-items-start gap-2 my-5">
+        <button data-target="instructions" class="btn p-0 fs-5 active">
+          <i class="fa-regular fa-file-lines fw-semibold"></i>
+          <span class="btn-Text d-sm-inline">Instructions</span>
+        </button>
+        <button data-target="personalDetails" class="btn p-0 fs-5">
           <i class="fa-solid fa-user"></i>
-          <span class="btn-Text d-sm-inline">Personal Details</span></button>
-        <button data-target="address" class="btn btn-info text-white fw-semibold">
+          <span class="btn-Text d-sm-inline">Personal Details</span>
+        </button>
+        <button data-target="address" class="btn p-0 fs-5">
           <i class="fa-solid fa-location-dot"></i>
-          <span class="btn-Text d-sm-inline">Address</span></button>
-        <button data-target="passport" class="btn btn-info text-white fw-semibold">
+          <span class="btn-Text d-sm-inline">Address</span>
+        </button>
+        <button data-target="passport" class="btn p-0 fs-5">
           <i class="fa-solid fa-passport"></i>
           <span class="btn-Text d-sm-inline">Passport Info</span></button>
-        <button data-target="language" class="btn btn-info text-white fw-semibold">
+        <button data-target="language" class="btn p-0 fs-5">
           <i class="fa-solid fa-language"></i>
           <span class=" btn-Text d-sm-inline">Language</span></button>
-        <button data-target="family" class="btn btn-info text-white fw-semibold">
+        <button data-target="family" class="btn p-0 fs-5">
           <i class="fa-solid fa-people-group"></i>
           <span class="btn-Text d-sm-inline">Family Info</span> </button>
         
@@ -61,7 +53,20 @@
         
       </div>
       <!-------------------------right main bar----------  -->
-      <div class=" bg-info-subtle p-4 container content">
+      <!--------------------------- Nav --------------->
+      <nav class="navbar navbar-expand-lg position-sticky bg-info  top-0 z-1" >
+        <div class="container-fluid">
+          
+          <button id="menu" class="navbar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <a class="navbar-brand"  href="#">
+            <img src="./assets/mnj.png" style="height: 40px;width: 40px;" alt="">
+          </a>
+        </div>
+      </nav>
+      <div class="bg-body-secondary p-4 container content">
      
           <!--       Instructions part -------------- -->
           <div id="instructions" style="min-height: 50vh;" class="d-flex  flex-column align-items-center justify-content-center gap-lg-3 gap-sm-2">
