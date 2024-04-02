@@ -9,7 +9,11 @@ ol{
 
 #sidebar{
   transition: background-color 0.4s linear;
-  
+}
+
+/* fixed height of icons */
+i{
+  width: 20px;
 }
 
 h3{
@@ -19,6 +23,11 @@ h3{
 /* set sidebar button text */
 .btn-Text{
   margin-left: 10px;
+  transition: letter-spacing 0.3s linear;
+}
+.btn-Text:hover{
+  letter-spacing: 1px;
+  
 }
 
 
@@ -49,13 +58,23 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
-/* set sidebar buttons to active state */
-.btn.active{
-  font-weight: 500;
+/* button styles */
+.btn{
   border: none;
-  border-bottom: 2px solid green;
+  border-bottom: 1px solid white;
+  transition: border-bottom 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
+/* set sidebar buttons to active state */
+.btn.active{
+  color:rgb(37, 123, 156);
+  border-bottom: 1px solid rgb(37, 123, 156);
+  
+}
+
+form.div{
+  transition: display 0.4s ease-in;
+}
 
 /* Hide the sidebar on extra small screens */
 
@@ -79,31 +98,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
   }
 
-@media (min-width:575.98) {
-    
-    #sidebar {
-      
-      width: 25%;
-      
-    }
-  }
 
-  /* blinking animation */
-  @keyframes blink {
-    0%{
-      color: red;
-    }
-    50%{
-      color: green;
-    }
-    100%{
-      color: blue;
-    }
-    
-  }
-
-  .blink{
-    animation: blink 1s infinite;
-  }
 
   

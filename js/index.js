@@ -15,24 +15,8 @@ document.addEventListener('DOMContentLoaded',function(){
     window.onscroll=()=>navScrollEffect()
 
 
-    // Give functionality to sidebar is small screen to toggle by menu icon
+   
 
-const menu=document.getElementById('menu')
-
-menu.addEventListener('click',()=>{
-    sidebar.classList.remove('d-none')
-    sidebar.classList.remove('w-25')
-    sidebar.classList.add('w-50') 
-})
-
-//give functionality to close button
-const close=document.getElementById('close')
-
-close.addEventListener('click',()=>{
-   sidebar.classList.add('d-none')
-   sidebar.classList.add('w-25')
-   sidebar.classList.remove('w-50')
-})
 
 
 // /////Image uploading preview
@@ -226,34 +210,31 @@ function validateForm(){
     
 }
 
-///////////attach each sections to the sidebar buttons
-const buttons=document.getElementsByTagName('button')
-const buttonArray=Array.from(buttons)
-//click event
-for(let i=1;i<9;i++){
-    buttons[i].addEventListener('click',function(){
+///////////CLICK AND HOVER EFFECT ON SIDEBAR BUTTONS
+const sidebarBtnContainer=document.getElementById('sidebar-btn-container')
+const sidebarButtons=Array.from(sidebarBtnContainer.children);
+const formChild=document.getElementById('form').children;
 
-        //remove active class
-      buttonArray.forEach(btn=>btn.classList.remove('active'))
-
-        buttons[i].classList.add('active')
-        // Get the target section ID
-      const targetId = buttons[i].getAttribute('data-target');
-
-      // Get the target section element
-      const targetSection = document.getElementById(targetId);
-
-      // Scroll to the target section
-      if (targetSection) {
-        const scrollPosition = targetSection.offsetTop - 100;
-        window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-      }
+sidebarButtons.forEach(btn=>{
+    btn.addEventListener('click',function(){
+        //add and hide active class of buttons
+        sidebarButtons.forEach(item=>item.classList.remove('active'))
+        btn.classList.add('active')
+        
+        //add and hide of form sections
+        const targetId=btn.getAttribute('data-target');
+        const targetSection=document.getElementById(targetId)
+        if(targetSection){
+            //set all sections to hide
+            for(let j=0;j<formChild.length-2;j++){
+                formChild[j].classList.add('d-none')
+                
+            }
+            targetSection.classList.remove('d-none')
+            console.log(targetSection)
+        }
     })
-}
-
-
-
-
+})
 
 
 
