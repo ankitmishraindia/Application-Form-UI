@@ -233,12 +233,23 @@ sidebarButtons.forEach(btn=>{
             targetSection.classList.remove('d-none')
             console.log(targetSection)
         }
+
+        //set heading text
+        const heading=document.getElementById('heading')
+        heading.innerHTML=btn.innerHTML;
     })
 })
 
+// set functionality of header button of every section
 
+const headerBtn=Array.from(document.getElementsByClassName('head-btn'))
 
-
+headerBtn.forEach(btn=>btn.addEventListener('click',function(){
+    //remove all active
+    headerBtn.forEach(button=>button.classList.remove('active'))
+    //add active class
+    btn.classList.add('active')
+}))
 
 })
 

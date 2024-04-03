@@ -15,7 +15,7 @@
   <body class="poppins-regular">
     
      <!-- ------------------------Main---------------------------------- -->
-    <div class="w-100 bg-body-secondary">
+    <div class="w-100">
       <!-- ------------------------left Sidebar----------- -->
       <div id="sidebar"  class="container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0 d-none d-sm-block vh-100" style="width: 20%;">
         <img src="./assets/mnj.png" style="height: 40px;width: 60px;" alt="">
@@ -47,7 +47,7 @@
      
       <div class="" style="margin-left: 20%; width: 80%;">
          <!--------------------------- Nav --------------->
-          <nav class="navbar navbar-expand-lg position-sticky bg-info  top-0 z-3 " >
+          <nav class="navbar navbar-expand-lg position-sticky bg-info  top-0 z-3 px-5" >
             <div class="container-fluid">
               
               <button id="menu" class="navbar-toggler text-white" type="button">
@@ -55,27 +55,33 @@
               </button>
               
                 
-              <a class="navbar-brand text-white "  href="#">
-                <div class="fs-4 ">
+              <a class="navbar-brand text-white"  href="#personalDetails">
+                <div class="fs-4" id="heading">
                 <i class="fa-solid fa-user"></i>
                 <span class="btn-Text d-sm-inline">Personal Info</span>
               </div>
               </a>
-              <a class="navbar-brand text-warning"  href="#">
-                <span>MNJ Softwares.</span>
+              <a class="navbar-brand text-warning p-0"  href="#">
+                <span>MNJ Softwares</span>
               </a>
             </div>
           </nav>
      
           
            <!-- -----form------------------- ---------->
-          <form id="form" class="container" novalidate>
+          <form id="form" class="container px-3" novalidate>
             <!----personal details section -->
             
-            <div id="personalDetails" class="container rounded-3 overflow-hidden  bg-white p-2" >
+            <div id="personalDetails" class="" >
+              <!-- header buttons -->
+              <div class="">
+                <button type="button" class="py-3  head-btn active"><i class="fa-solid fa-list"></i> List View</button>
+                <button type="button" class="py-3  head-btn"><i class="fas fa-th"></i> Grid View</button>
+              </div>
+              
               <!-- profile image -->
               
-              <div class="d-flex justify-content-between align-items-center">
+              <div class="d-none justify-content-between align-items-center rounded-3 bg-white container  overflow-hidden p-3 mt-3">
                 <p>Applicant's Image:</p>
                 <div class="d-flex flex-column justify-content-center gap-2 ">
                  
@@ -88,102 +94,103 @@
                 </div>
                 
               </div>
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-                <div class="mb-3 position-relative">
-                  <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="firstname" placeholder="ex. ANKIT">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="lastname" placeholder="ex. MISHRA">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="father" placeholder="ex. SHIV MISHRA">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
-                  <input type="text" class="form-control bg-info-subtle" id="mother" placeholder="ex. UMA MISHRA">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="nationality" class="form-label">Nationality</label>
-                  <select class="form-select bg-info-subtle" name="" id="nationality">
-                    <option value="">Select Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="other">Others</option>
-                  </select>
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="socialnumber" class="form-label">Social Security Number(if applicable)</label>
-                  <input type="number" class="form-control bg-info-subtle" id="socialnumber">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="sex" class="form-label">Sex<span class="text-info">&ast;</span></label>
-                  <select class="form-select bg-info-subtle" name="" id="sex" >
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="Other">Other</option>
-                  </select>
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="maritalstatus" class="form-label">Marital Status</label>
-                  <select class="form-select bg-info-subtle" name="" id="maritalstatus">
-                    <option value="">Select Marital..</option>
-                    <option value="married">Married</option>
-                    <option value="unmarried">Unmarried</option>
-                    <option value="divorced">Divorced</option>
-                  </select>
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="pannumber" class="form-label">PAN Number</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pannumber" minlength="10" maxlength="10" placeholder="ex. CCZQM1117M">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="dob" class="form-label">Date of Birth</label>
-                  <input type="date" class="form-control bg-info-subtle" id="dob" placeholder="ex. 02/12/2022">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative">
-                  <label for="birthplace" class="form-label">Place of Birth</label>
-                  <input type="text" class="form-control bg-info-subtle" id="birthplace" placeholder="ex. Babhnan">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative ">
-                  <label for="telephone" class="form-label">Telephone</label>
-                  <input type="number" class="form-control bg-info-subtle" id="telephone" placeholder="ex. 0522 256635">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                <div class="mb-3 position-relative ">
-                  <label for="mobile" class="form-label">Mobile<span class="text-info">&ast;</span></label>
-                    <input type="number"  class="form-control bg-info-subtle col-6" id="mobile" maxlength="10" placeholder="ex. 9798566512">
-                    <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                  
-                </div>
-                <div class="mb-3 position-relative ">
-                  <label for="email" class="form-label">Email<span class="text-info">&ast;</span></label>
-                    <input type="email" class="form-control bg-info-subtle col-6" id="email" autocomplete='off' placeholder="ex. akita@gmail.com">
-                    <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                  
-                </div>
-                 
+              <div class="border rounded-3 overflow-hidden">
+                 <!-- heading div -->
+                 <div class="text-dark border-bottom px-3 py-2" >
+                   Personal Details
+                 </div>
+                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 bg-white p-3 text-body-secondary">
+                      <div class="mb-3 position-relative">
+                        <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
+                        <input type="text" class="form-control text-body-secondary" id="firstname" >
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
+                        <input type="text" class="form-control text-body-secondary  " id="lastname" placeholder="ex. MISHRA">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
+                        <input type="text" class="form-control text-body-secondary  " id="father" placeholder="ex. SHIV MISHRA">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
+                        <input type="text" class="form-control text-body-secondary  " id="mother" placeholder="ex. UMA MISHRA">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="nationality" class="form-label">Nationality</label>
+                        <select class="form-select text-body-secondary  " name="" id="nationality">
+                          <option value="">Select Nationality</option>
+                          <option value="indian">Indian</option>
+                          <option value="other">Others</option>
+                        </select>
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="socialnumber" class="form-label">Social Security Number(if applicable)</label>
+                        <input type="number" class="form-control text-body-secondary  " id="socialnumber">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="sex" class="form-label">Sex<span class="text-info">&ast;</span></label>
+                        <select class="form-select text-body-secondary  " name="" id="sex" >
+                          <option value="">Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="Other">Other</option>
+                        </select>
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="maritalstatus" class="form-label">Marital Status</label>
+                        <select class="form-select text-body-secondary  " name="" id="maritalstatus">
+                          <option value="">Select Marital..</option>
+                          <option value="married">Married</option>
+                          <option value="unmarried">Unmarried</option>
+                          <option value="divorced">Divorced</option>
+                        </select>
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="pannumber" class="form-label">PAN Number</label>
+                        <input type="text" class="form-control text-body-secondary  " id="pannumber" minlength="10" maxlength="10" placeholder="ex. CCZQM1117M">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control text-body-secondary  " id="dob" placeholder="ex. 02/12/2022">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="birthplace" class="form-label">Place of Birth</label>
+                        <input type="text" class="form-control text-body-secondary  " id="birthplace" placeholder="ex. Babhnan">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative ">
+                        <label for="telephone" class="form-label">Telephone</label>
+                        <input type="number" class="form-control text-body-secondary  " id="telephone" placeholder="ex. 0522 256635">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="mb-3 position-relative ">
+                        <label for="mobile" class="form-label">Mobile<span class="text-info">&ast;</span></label>
+                          <input type="number"  class="form-control text-body-secondary   col-6" id="mobile" maxlength="10" placeholder="ex. 9798566512">
+                          <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                        
+                      </div>
+                      <div class="mb-3 position-relative ">
+                        <label for="email" class="form-label">Email<span class="text-info">&ast;</span></label>
+                          <input type="email" class="form-control text-body-secondary   col-6" id="email" autocomplete='off' placeholder="ex. akita@gmail.com">
+                          <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                        
+                      </div>
+                      
+                  </div>
               </div>
-              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 mt-2 ">
-                <div class="mb-3 ">
-                  <label for="instantmessage" class="form-label">Instant Messaging ID</label>
-                  <input type="text" class="form-control bg-info-subtle" id="instantmessage">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-              </div>
+             
+             
               
             </div>
 
@@ -197,15 +204,15 @@
               <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
                   <label for="housenopst" class="form-label">House No.</label>
-                  <input type="text" class="form-control bg-info-subtle" id="housenopst" placeholder="ex. 21B">
+                  <input type="text" class="form-control text-body-secondary  " id="housenopst" placeholder="ex. 21B">
                 </div>
                 <div class="mb-1 ">
                   <label for="localitypst" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control bg-info-subtle" id="localitypst" placeholder="ex. Babhnan-bazar">
+                  <input type="text" class="form-control text-body-secondary  " id="localitypst" placeholder="ex. Babhnan-bazar">
                 </div>
                 <div class="mb-1 ">
                   <label for="statepst" class="form-label">State</label>
-                  <select class="form-select bg-info-subtle" name="" id="statepst">
+                  <select class="form-select  " name="" id="statepst">
                    
                         <option value="">Select a state</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -247,11 +254,11 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="pincodepst" class="form-label">Pincode</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
+                  <input type="text" class="form-control text-body-secondary  " id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
                 </div>
                 <div class="mb-1 ">
                   <label for="periodstaypst" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control bg-info-subtle" id="periodstaypst" placeholder="ex. 2 Months">
+                  <input type="text" class="form-control text-body-secondary  " id="periodstaypst" placeholder="ex. 2 Months">
                 </div>
                 
               </div>
@@ -266,15 +273,15 @@
               <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
                 <div class="mb-1 ">
                   <label for="housenoPmnt" class="form-label">House No.</label>
-                  <input type="text" class="form-control bg-info-subtle" id="housenoPmnt" placeholder="ex. 21B">
+                  <input type="text" class="form-control text-body-secondary  " id="housenoPmnt" placeholder="ex. 21B">
                 </div>
                 <div class="mb-1 ">
                   <label for="localityPmnt" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control bg-info-subtle" id="localityPmnt" placeholder="ex. Babhnan-Bazar">
+                  <input type="text" class="form-control text-body-secondary  " id="localityPmnt" placeholder="ex. Babhnan-Bazar">
                 </div>
                 <div class="mb-1 ">
                   <label for="statePmnt" class="form-label">State</label>
-                  <select class="form-select bg-info-subtle" name="" id="statePmnt">
+                  <select class="form-select  " name="" id="statePmnt">
                    
                         <option value="">Select a state</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -316,11 +323,11 @@
                 </div>
                 <div class="mb-1 ">
                   <label for="pincodePmnt" class="form-label">Pincode</label>
-                  <input type="text" class="form-control bg-info-subtle" id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
+                  <input type="text" class="form-control text-body-secondary  " id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
                 </div>
                 <div class="mb-1 ">
                   <label for="periodstayPmnt" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control bg-info-subtle" id="periodstayPmnt" placeholder="ex. 2 Months">
+                  <input type="text" class="form-control text-body-secondary  " id="periodstayPmnt" placeholder="ex. 2 Months">
                 </div>
                 
               </div>
@@ -350,19 +357,19 @@
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="passportDetail">
                 <div class="mb-1 ">
                   <label for="passportno" class="form-label">Number</label>
-                  <input type="number" class="form-control bg-info-subtle" id="passportno" placeholder="ex. Z91449100">
+                  <input type="number" class="form-control text-body-secondary  " id="passportno" placeholder="ex. Z91449100">
                 </div>
                 <div class="mb-1 ">
                   <label for="issuedate" class="form-label">Date of Issue</label>
-                  <input type="date" class="form-control bg-info-subtle" id="issuedate">
+                  <input type="date" class="form-control  " id="issuedate">
                 </div>
                 <div class="mb-1 ">
                   <label for="expirydate" class="form-label">Date of Expiry</label>
-                  <input type="date" class="form-control  bg-info-subtle" id="expirydate">
+                  <input type="date" class="form-control   " id="expirydate">
                 </div>
                 <div class="mb-1 ">
                   <label for="issueplace" class="form-label">Place Issue</label>
-                  <input type="text" class="form-control bg-info-subtle" id="issueplace" placeholder="Lucknow">
+                  <input type="text" class="form-control  " id="issueplace" placeholder="Lucknow">
                 </div>
                 
                 
@@ -372,7 +379,7 @@
                   <label for="visa" class="form-label">Do you have valid Visa?</label>
                 </div>
                 <div>
-                  <select class="form-select bg-info-subtle" name="" id="visa">
+                  <select class="form-select  " name="" id="visa">
                     <option value="">Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -384,7 +391,7 @@
                   <label for="visatype" class="form-label">Type of Visa</label>
                 </div>
                 <div>
-                  <select class="form-select bg-info-subtle" name="" id="visatype">
+                  <select class="form-select  " name="" id="visatype">
                     <option value="">Select Visa type</option>
                     <option value="student">Student</option>
                     <option value="employment">Employment</option>
@@ -398,7 +405,7 @@
                   <label for="travel" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
                 </div>
                 <div>
-                  <select class="form-select bg-info-subtle" id="travel" >
+                  <select class="form-select  " id="travel" >
                     <option value="">Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
@@ -415,12 +422,12 @@
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
                   <label for="lan2" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="lan2" placeholder="ex. ENGLISH">
+                  <input type="text" class="form-control  " id="lan2" placeholder="ex. ENGLISH">
                 </div>
                 <div class="d-flex gap-1">
                     <div class="mb-1 ">
                     <label for="lan2read" class="form-label">Read</label>
-                    <select class="form-select bg-info-subtle" name="" id="lan2read">
+                    <select class="form-select  " name="" id="lan2read">
                       <option value="">Select</option>
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
@@ -428,7 +435,7 @@
                     </div>
                     <div class="mb-1 ">
                       <label for="lan2write" class="form-label">Write</label>
-                      <select class="form-select bg-info-subtle" name="" id="lan2write">
+                      <select class="form-select  " name="" id="lan2write">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -436,7 +443,7 @@
                     </div>
                     <div class="mb-1 ">
                       <label for="lan2speak" class="form-label">Speak</label>
-                      <select class="form-select bg-info-subtle" name="" id="lan2speak">
+                      <select class="form-select  " name="" id="lan2speak">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -448,12 +455,12 @@
               <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
                 <div class="mb-1 ">
                   <label for="lan1" class="form-label">Language</label>
-                  <input type="text" class="form-control bg-info-subtle" id="lan1" placeholder="ex. HINDI">
+                  <input type="text" class="form-control  " id="lan1" placeholder="ex. HINDI">
                 </div>
                 <div class="d-flex gap-1 ">
                     <div class="mb-1 ">
                     <label for="lan1read" class="form-label">Read</label>
-                    <select class="form-select bg-info-subtle" name="" id="lan1read">
+                    <select class="form-select  " name="" id="lan1read">
                       <option value="">Select</option>
                       <option value="yes">Yes</option>
                       <option value="no">No</option>
@@ -461,7 +468,7 @@
                     </div>
                     <div class="mb-1 ">
                       <label for="lan1write" class="form-label">Write</label>
-                      <select class="form-select bg-info-subtle" name="" id="lan1write">
+                      <select class="form-select  " name="" id="lan1write">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -469,7 +476,7 @@
                     </div>
                     <div class="mb-1 ">
                       <label for="lan1speak" class="form-label">Speak</label>
-                      <select class="form-select bg-info-subtle" name="" id="lan1speak">
+                      <select class="form-select  " name="" id="lan1speak">
                         <option value="">Select</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
@@ -519,11 +526,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="fname" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="fname">
+                   <input type="text" class="form-control  " id="fname">
                  </div>
                  <div class="mb-1 ">
                    <label for="fage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="fage">
+                   <input type="number" class="form-control w-50  " id="fage">
                  </div>
                 
                </div>
@@ -534,11 +541,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="mname" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="mname">
+                   <input type="text" class="form-control  " id="mname">
                  </div>
                  <div class="mb-1 ">
                    <label for="mage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="mage">
+                   <input type="number" class="form-control w-50  " id="mage">
                  </div>
                 
                </div>
@@ -549,11 +556,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="spousename" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="spousename">
+                   <input type="text" class="form-control  " id="spousename">
                  </div>
                  <div class="mb-1 ">
                    <label for="spouseage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="spouseage">
+                   <input type="number" class="form-control w-50  " id="spouseage">
                  </div>
                 
                </div>
@@ -564,11 +571,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="childname" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="childname">
+                   <input type="text" class="form-control  " id="childname">
                  </div>
                  <div class="mb-1 ">
                    <label for="childage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="childage">
+                   <input type="number" class="form-control w-50  " id="childage">
                  </div>
                 
                </div>
@@ -579,11 +586,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="broname" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="broname">
+                   <input type="text" class="form-control  " id="broname">
                  </div>
                  <div class="mb-1 ">
                    <label for="broage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="broage">
+                   <input type="number" class="form-control w-50  " id="broage">
                  </div>
                 
                </div>
@@ -594,11 +601,11 @@
                  </div>
                  <div class="mb-1 ">
                    <label for="sisname" class="form-label">Name</label>
-                   <input type="text" class="form-control bg-info-subtle" id="sisname">
+                   <input type="text" class="form-control  " id="sisname">
                  </div>
                  <div class="mb-1 ">
                    <label for="sisage" class="form-label">Age</label>
-                   <input type="number" class="form-control w-50 bg-info-subtle" id="sisage">
+                   <input type="number" class="form-control w-50  " id="sisage">
                  </div>
                 
                </div>
