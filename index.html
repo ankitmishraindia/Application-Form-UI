@@ -17,7 +17,7 @@
      <!-- ------------------------Main---------------------------------- -->
     <div class="w-100">
       <!-- ------------------------left Sidebar----------- -->
-      <div id="sidebar"  class="container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0 d-none d-sm-block vh-100" style="width: 20%;">
+      <div id="sidebar"  class="d-none d-sm-block container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0  vh-100" style="width: 20%;">
         <img src="./assets/mnj.png" style="height: 40px;width: 60px;" alt="">
       <div id="sidebar-btn-container" class=" d-flex flex-column align-items-start gap-2 gap-md-3 my-5">
         <button data-target="personalDetails" class="btn p-0 fs-5 active">
@@ -45,7 +45,7 @@
       </div>
       <!-------------------------right main bar----------  -->
      
-      <div class="" style="margin-left: 20%; width: 80%;">
+      <div class="main" >
          <!--------------------------- Nav --------------->
           <nav class="navbar navbar-expand-lg position-sticky bg-info  top-0 z-3 px-5" >
             <div class="container-fluid">
@@ -75,8 +75,8 @@
             <div id="personalDetails" class="" >
               <!-- header buttons -->
               <div class="">
-                <button type="button" class="py-3  head-btn active"><i class="fa-solid fa-list"></i> List View</button>
-                <button type="button" class="py-3  head-btn"><i class="fas fa-th"></i> Grid View</button>
+                <button type="button" class="py-3  head-btn active"><i class="fas fa-th"></i> Grid View</button>
+                <button type="button" class="py-3  head-btn "><i class="fa-solid fa-list"></i> List View</button>
               </div>
               
               <!-- profile image -->
@@ -99,7 +99,7 @@
                  <div class="text-dark border-bottom px-3 py-2" >
                    Personal Details
                  </div>
-                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 bg-white p-3 text-body-secondary">
+                 <div id="personalInfoForm" class="row row-cols-3 bg-white p-3 text-body-secondary">
                       <div class="mb-3 position-relative">
                         <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
                         <input type="text" class="form-control text-body-secondary" id="firstname" >
@@ -107,37 +107,32 @@
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
-                        <input type="text" class="form-control text-body-secondary  " id="lastname" placeholder="ex. MISHRA">
+                        <input type="text" class="form-control text-body-secondary  " id="lastname" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
-                        <input type="text" class="form-control text-body-secondary  " id="father" placeholder="ex. SHIV MISHRA">
+                        <input type="text" class="form-control text-body-secondary  " id="father" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
-                        <input type="text" class="form-control text-body-secondary  " id="mother" placeholder="ex. UMA MISHRA">
+                        <input type="text" class="form-control text-body-secondary  " id="mother" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="nationality" class="form-label">Nationality</label>
                         <select class="form-select text-body-secondary  " name="" id="nationality">
-                          <option value="">Select Nationality</option>
+                          <option value="">--Nationality--</option>
                           <option value="indian">Indian</option>
                           <option value="other">Others</option>
                         </select>
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
-                        <label for="socialnumber" class="form-label">Social Security Number(if applicable)</label>
-                        <input type="number" class="form-control text-body-secondary  " id="socialnumber">
-                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                      </div>
-                      <div class="mb-3 position-relative">
                         <label for="sex" class="form-label">Sex<span class="text-info">&ast;</span></label>
                         <select class="form-select text-body-secondary  " name="" id="sex" >
-                          <option value="">Select Gender</option>
+                          <option value="">--Gender--</option>
                           <option value="male">Male</option>
                           <option value="female">Female</option>
                           <option value="Other">Other</option>
@@ -147,7 +142,7 @@
                       <div class="mb-3 position-relative">
                         <label for="maritalstatus" class="form-label">Marital Status</label>
                         <select class="form-select text-body-secondary  " name="" id="maritalstatus">
-                          <option value="">Select Marital..</option>
+                          <option value="">--Marital--</option>
                           <option value="married">Married</option>
                           <option value="unmarried">Unmarried</option>
                           <option value="divorced">Divorced</option>
@@ -156,33 +151,33 @@
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="pannumber" class="form-label">PAN Number</label>
-                        <input type="text" class="form-control text-body-secondary  " id="pannumber" minlength="10" maxlength="10" placeholder="ex. CCZQM1117M">
+                        <input type="text" class="form-control text-body-secondary  " id="pannumber" minlength="10" maxlength="10">
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="dob" class="form-label">Date of Birth</label>
-                        <input type="date" class="form-control text-body-secondary  " id="dob" placeholder="ex. 02/12/2022">
+                        <input type="date" class="form-control text-body-secondary  " id="dob" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
                         <label for="birthplace" class="form-label">Place of Birth</label>
-                        <input type="text" class="form-control text-body-secondary  " id="birthplace" placeholder="ex. Babhnan">
+                        <input type="text" class="form-control text-body-secondary  " id="birthplace" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative ">
                         <label for="telephone" class="form-label">Telephone</label>
-                        <input type="number" class="form-control text-body-secondary  " id="telephone" placeholder="ex. 0522 256635">
+                        <input type="number" class="form-control text-body-secondary  " id="telephone" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative ">
                         <label for="mobile" class="form-label">Mobile<span class="text-info">&ast;</span></label>
-                          <input type="number"  class="form-control text-body-secondary   col-6" id="mobile" maxlength="10" placeholder="ex. 9798566512">
+                          <input type="number"  class="form-control text-body-secondary" id="mobile" maxlength="10">
                           <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                         
                       </div>
                       <div class="mb-3 position-relative ">
                         <label for="email" class="form-label">Email<span class="text-info">&ast;</span></label>
-                          <input type="email" class="form-control text-body-secondary   col-6" id="email" autocomplete='off' placeholder="ex. akita@gmail.com">
+                          <input type="email" class="form-control text-body-secondary" id="email" autocomplete='off'>
                           <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                         
                       </div>
@@ -195,145 +190,156 @@
             </div>
 
               <!-- ---address section------->
-
-              
-            <!-- <h3  class="mt-4"><i class="fa-solid fa-location-dot"></i> <span class="fs-4 ">Address:</span></h3> -->
-            <div id="address" class="container rounded-3  bg-white p-2 d-none" >
-              <!--Present Address-->
-              <p class="fw-bold text-body-secondary ">Present Address:</p>
-              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
-                <div class="mb-1 ">
-                  <label for="housenopst" class="form-label">House No.</label>
-                  <input type="text" class="form-control text-body-secondary  " id="housenopst" placeholder="ex. 21B">
+            <div id="address" class="d-none" >
+                <!-- header buttons -->
+                <div class="">
+                  <button type="button" class="py-3  head-btn  active"><i class="fa-solid fa-location-dot"></i> Present</button>
+                  <button type="button" class="py-3  head-btn "><i class="fa-solid fa-earth-americas"></i> Permanant</button>
                 </div>
-                <div class="mb-1 ">
-                  <label for="localitypst" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control text-body-secondary  " id="localitypst" placeholder="ex. Babhnan-bazar">
-                </div>
-                <div class="mb-1 ">
-                  <label for="statepst" class="form-label">State</label>
-                  <select class="form-select  " name="" id="statepst">
+                 <!--Present Address-->
+                <div class="border rounded-3 overflow-hidden mt-5 address-child">
+                   <!-- heading div -->
+                   <div class="text-dark border-bottom px-3 py-2" >
+                     Present Address
+                   </div>
+                   <div id="personalInfoForm" class="row row-cols-2 bg-white p-3 text-body-secondary">
+                    <div class="mb-1 ">
+                      <label for="housenopst" class="form-label">House No.</label>
+                      <input type="text" class="form-control text-body-secondary  " id="housenopst" placeholder="ex. 21B">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="localitypst" class="form-label">Locality/City</label>
+                      <input type="text" class="form-control text-body-secondary  " id="localitypst" placeholder="ex. Babhnan-bazar">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="statepst" class="form-label">State</label>
+                      <select class="form-select  " name="" id="statepst">
+                       
+                            <option value="">Select a state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Puducherry">Puducherry</option>
+                      </select>
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="pincodepst" class="form-label">Pincode</label>
+                      <input type="text" class="form-control text-body-secondary  " id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="periodstaypst" class="form-label">Period of Stay</label>
+                      <input type="text" class="form-control text-body-secondary  " id="periodstaypst" placeholder="ex. 2 Months">
+                    </div>
+                    
+                    </div>
                    
-                        <option value="">Select a state</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="West Bengal">West Bengal</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                        <option value="Daman and Diu">Daman and Diu</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Puducherry">Puducherry</option>
-                  </select>
                 </div>
-                <div class="mb-1 ">
-                  <label for="pincodepst" class="form-label">Pincode</label>
-                  <input type="text" class="form-control text-body-secondary  " id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
-                </div>
-                <div class="mb-1 ">
-                  <label for="periodstaypst" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control text-body-secondary  " id="periodstaypst" placeholder="ex. 2 Months">
+                 <!--permanent address section-->
+                <div class="border rounded-3 overflow-hidden mt-5 address-child d-none">
+                  <!-- heading div -->
+                  <div class="text-dark border-bottom px-3 py-2" >
+                    Permanent Address
+                  </div>
+                  <div class="d-flex gap-2 bg-white p-3">
+                    <input type="checkbox" id="sameaddress" >
+                    <label for="sameaddress">Same As Present Address</label>
+                  </div>
+                  <div id="personalInfoForm" class="row row-cols-2 bg-white p-3 text-body-secondary">
+                    <div class="mb-1 ">
+                      <label for="housenoPmnt" class="form-label">House No.</label>
+                      <input type="text" class="form-control text-body-secondary  " id="housenoPmnt" placeholder="ex. 21B">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="localityPmnt" class="form-label">Locality/City</label>
+                      <input type="text" class="form-control text-body-secondary  " id="localityPmnt" placeholder="ex. Babhnan-Bazar">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="statePmnt" class="form-label">State</label>
+                      <select class="form-select  " name="" id="statePmnt">
+                       
+                            <option value="">Select a state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Odisha">Odisha</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman and Diu">Daman and Diu</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Puducherry">Puducherry</option>
+                      </select>
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="pincodePmnt" class="form-label">Pincode</label>
+                      <input type="text" class="form-control text-body-secondary  " id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
+                    </div>
+                    <div class="mb-1 ">
+                      <label for="periodstayPmnt" class="form-label">Period of Stay</label>
+                      <input type="text" class="form-control text-body-secondary  " id="periodstayPmnt" placeholder="ex. 2 Months">
+                    </div>
+                  </div>
                 </div>
                 
-              </div>
-
-              <!--permanent address section-->
-              <p class="fw-bold text-body-secondary mt-2 mb-0 ">Permanent Address:</p>
-              <div class="d-flex gap-2">
-                <input type="checkbox" id="sameaddress" >
-                <label for="sameaddress">Same As Present Address</label>
-              </div>
-              
-              <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3">
-                <div class="mb-1 ">
-                  <label for="housenoPmnt" class="form-label">House No.</label>
-                  <input type="text" class="form-control text-body-secondary  " id="housenoPmnt" placeholder="ex. 21B">
-                </div>
-                <div class="mb-1 ">
-                  <label for="localityPmnt" class="form-label">Locality/City</label>
-                  <input type="text" class="form-control text-body-secondary  " id="localityPmnt" placeholder="ex. Babhnan-Bazar">
-                </div>
-                <div class="mb-1 ">
-                  <label for="statePmnt" class="form-label">State</label>
-                  <select class="form-select  " name="" id="statePmnt">
-                   
-                        <option value="">Select a state</option>
-                        <option value="Andhra Pradesh">Andhra Pradesh</option>
-                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                        <option value="Assam">Assam</option>
-                        <option value="Bihar">Bihar</option>
-                        <option value="Chhattisgarh">Chhattisgarh</option>
-                        <option value="Goa">Goa</option>
-                        <option value="Gujarat">Gujarat</option>
-                        <option value="Haryana">Haryana</option>
-                        <option value="Himachal Pradesh">Himachal Pradesh</option>
-                        <option value="Jharkhand">Jharkhand</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Madhya Pradesh">Madhya Pradesh</option>
-                        <option value="Maharashtra">Maharashtra</option>
-                        <option value="Manipur">Manipur</option>
-                        <option value="Meghalaya">Meghalaya</option>
-                        <option value="Mizoram">Mizoram</option>
-                        <option value="Nagaland">Nagaland</option>
-                        <option value="Odisha">Odisha</option>
-                        <option value="Punjab">Punjab</option>
-                        <option value="Rajasthan">Rajasthan</option>
-                        <option value="Sikkim">Sikkim</option>
-                        <option value="Tamil Nadu">Tamil Nadu</option>
-                        <option value="Telangana">Telangana</option>
-                        <option value="Tripura">Tripura</option>
-                        <option value="Uttar Pradesh">Uttar Pradesh</option>
-                        <option value="Uttarakhand">Uttarakhand</option>
-                        <option value="West Bengal">West Bengal</option>
-                        <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                        <option value="Chandigarh">Chandigarh</option>
-                        <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
-                        <option value="Daman and Diu">Daman and Diu</option>
-                        <option value="Lakshadweep">Lakshadweep</option>
-                        <option value="Delhi">Delhi</option>
-                        <option value="Puducherry">Puducherry</option>
-                  </select>
-                </div>
-                <div class="mb-1 ">
-                  <label for="pincodePmnt" class="form-label">Pincode</label>
-                  <input type="text" class="form-control text-body-secondary  " id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
-                </div>
-                <div class="mb-1 ">
-                  <label for="periodstayPmnt" class="form-label">Period of Stay</label>
-                  <input type="text" class="form-control text-body-secondary  " id="periodstayPmnt" placeholder="ex. 2 Months">
-                </div>
-                
-              </div>
-              
-            </div> 
-
+            </div>
+  
+           
               <!---- ---Passport section------->
 
              

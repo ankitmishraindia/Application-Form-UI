@@ -227,6 +227,7 @@ sidebarButtons.forEach(btn=>{
         if(targetSection){
             //set all sections to hide
             for(let j=0;j<formChild.length-2;j++){
+                formChild[j].classList.add('trans')
                 formChild[j].classList.add('d-none')
                 
             }
@@ -240,15 +241,47 @@ sidebarButtons.forEach(btn=>{
     })
 })
 
-// set functionality of header button of every section
+// set functionality of header button 
 
 const headerBtn=Array.from(document.getElementsByClassName('head-btn'))
 
+//set buttotns active state
 headerBtn.forEach(btn=>btn.addEventListener('click',function(){
-    //remove all active
     headerBtn.forEach(button=>button.classList.remove('active'))
-    //add active class
     btn.classList.add('active')
+
+    const personalInfoForm=document.getElementById('personalInfoForm');
+    
+    if(btn===headerBtn[1]){
+        personalInfoForm.classList.remove('row')
+        Array.from(personalInfoForm.children).forEach(div=>{
+            div.classList.add('d-flex')
+            div.classList.add('w-50')
+            div.classList.add('justify-content-center')
+        })
+    }
+    if(btn===headerBtn[0]){
+        personalInfoForm.classList.add('row')
+        Array.from(personalInfoForm.children).forEach(div=>div.classList.remove('d-flex'))
+    }
+
+    //   show hide in address section by click on buttons present and permanant
+    if(btn===headerBtn[2]){
+        const addresschild=document.getElementsByClassName('address-child')
+        
+            addresschild[0].classList.remove('d-none')
+        
+        
+        addresschild[1].classList.add('d-none')
+    }
+    if(btn===headerBtn[3]){
+        const addresschild=document.getElementsByClassName('address-child')
+        addresschild[0].classList.add('d-none')
+        addresschild[1].classList.remove('d-none')
+    }
+    
+
+    //
 }))
 
 })
