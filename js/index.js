@@ -1,18 +1,13 @@
 document.addEventListener('DOMContentLoaded',function(){
 
-    //navbar scrolling effect
-    const navbar=document.getElementsByTagName('nav');
+    //sidebar hiding/opening
+    
     const sidebar=document.getElementById('sidebar');
-    function navScrollEffect(){
-        if(document.body.scrollTop>10||document.documentElement.scrollTop>10){
-           
-            navbar[0].classList.add('shadow-sm');
-        }else{
-            navbar[0].classList.remove('shadow-sm')
-        }
-    }
+    const menu=document.getElementById('menu')
 
-    window.onscroll=()=>navScrollEffect()
+    menu.addEventListener('click',()=>{
+        sidebar.classList.toggle('hidden')
+    })
 
 
    
