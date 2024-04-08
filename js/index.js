@@ -4,11 +4,23 @@ document.addEventListener('DOMContentLoaded',function(){
     
     const sidebar=document.getElementById('sidebar');
     const menu=document.getElementById('menu')
+    const main=document.getElementById('main')
 
     menu.addEventListener('click',()=>{
-        sidebar.classList.toggle('hidden')
+        if(window.innerWidth>767.99){
+             sidebar.classList.toggle('hidden')
+        main.classList.toggle('main')
+        }
+        if(window.innerWidth<768){
+        sidebar.classList.toggle('show')
+    }
     })
-
+   
+//close sidebar arrow
+const closeArrow=document.getElementsByClassName('close-sidebar')
+closeArrow[0].addEventListener('click',()=>{
+    sidebar.classList.remove('show')
+})
 
    
 
@@ -232,7 +244,7 @@ sidebarButtons.forEach(btn=>{
 
         //set heading text
         const heading=document.getElementById('heading')
-        heading.innerHTML=btn.innerHTML;
+        heading.textContent=btn.textContent;
     })
 })
 

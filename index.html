@@ -17,51 +17,52 @@
      <!-- ------------------------Main---------------------------------- -->
     <div class="w-100">
       <!-- ------------------------left Sidebar----------- -->
-      <div id="sidebar"  class="container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0  vh-100" >
+      <div id="sidebar"  class="container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0 position-relative  vh-100" >
+        <i class="fas fa-arrow-left position-absolute top-2 end-0 text-info d-block d-md-none close-sidebar"></i>
         <img src="./assets/mnj.png" style="height: 40px;width: 60px;" alt="">
-      <div id="sidebar-btn-container" class=" d-flex flex-column align-items-start gap-2 gap-md-3 my-5">
-        <button data-target="personalDetails" class="btn p-0 fs-5 active">
-          <i class="fa-solid fa-user"></i>
-          <span class="btn-Text d-sm-inline">Personal Info</span>
-        </button>
-        <button data-target="address" class="btn p-0 fs-5">
-          <i class="fa-solid fa-location-dot"></i>
-          <span class="btn-Text d-sm-inline">Address</span>
-        </button>
-        <button data-target="passport" class="btn p-0 fs-5">
-          <i class="fa-solid fa-passport"></i>
-          <span class="btn-Text d-sm-inline">Passport Info</span></button>
-        <button data-target="language" class="btn p-0 fs-5">
-          <i class="fa-solid fa-language"></i>
-          <span class=" btn-Text d-sm-inline">Language</span></button>
-        <button data-target="family" class="btn p-0 fs-5">
-          <i class="fa-solid fa-people-group"></i>
-          <span class="btn-Text d-sm-inline">Family Info</span> </button>
-        
-      </div>
+        <div id="sidebar-btn-container" class=" d-flex flex-column align-items-start gap-2 gap-md-3 my-5">
+          <button data-target="personalDetails" class="btn p-0 fs-5 active">
+            <i class="fa-solid fa-user"></i>
+            <span class="btn-Text d-sm-inline">Personal Info</span>
+          </button>
+          <button data-target="address" class="btn p-0 fs-5">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="btn-Text d-sm-inline">Address</span>
+          </button>
+          <button data-target="passport" class="btn p-0 fs-5">
+            <i class="fa-solid fa-passport"></i>
+            <span class="btn-Text d-sm-inline">Passport Info</span></button>
+          <button data-target="language" class="btn p-0 fs-5">
+            <i class="fa-solid fa-language"></i>
+            <span class=" btn-Text d-sm-inline">Language</span></button>
+          <button data-target="family" class="btn p-0 fs-5">
+            <i class="fa-solid fa-people-group"></i>
+            <span class="btn-Text d-sm-inline">Family Info</span> </button>
+          
+        </div>
       
       
         
       </div>
       <!-------------------------right main bar----------  -->
      
-      <div class="main" >
+      <div id="main" class="main" >
          <!--------------------------- Nav --------------->
-          <nav class="navbar navbar-expand-lg position-sticky  top-0 z-3 px-3" >
+          <nav class="navbar navbar-expand-lg position-sticky  top-0 z-1 px-3" >
             <div class="d-flex justify-content-between align-items-center  w-100">
               
-              <div class="d-flex gap-2  align-items-end">
+              <div class="d-flex gap-2  align-items-end nav-first-div">
                 <button id="menu" class="bg-transparent border-0" type="button">
                   <svg width="50px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#72b3f8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Menu / Menu_Alt_01"> <path id="Vector" d="M12 17H19M5 12H19M5 7H19" stroke="#06b5d0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> </g></svg>
                 </button>
                 <a class="navbar-brand text-danger"  href="#personalDetails">
                   <div class="fs-4" id="heading">
-                  <i class="fa-solid fa-user"></i>
+                  
                   <span class="btn-Text d-sm-inline">Personal Info</span>
                   </div>
                 </a>
               </div>
-              <a class="navbar-brand text-white p-0"  href="#">
+              <a class="navbar-brand text-white p-0 d-none d-sm-block"  href="#">
                 <span>MNJ Softwares</span>
               </a>
             </div>
