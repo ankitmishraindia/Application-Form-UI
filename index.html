@@ -18,7 +18,7 @@
     <div class="w-100">
       <!-- ------------------------left Sidebar----------- -->
       <div id="sidebar"  class="container-fluid py-3 position-fixed z-2 bg-white  overflow-y-auto start-0 position-relative  vh-100" >
-        <i class="fas fa-arrow-left position-absolute top-2 end-0 text-info d-block d-md-none close-sidebar"></i>
+        <i class="fas fa-arrow-left position-absolute top-2 end-0 text-danger d-block d-md-none close-sidebar"></i>
         <img src="./assets/mnj.png" style="height: 40px;width: 60px;" alt="">
         <div id="sidebar-btn-container" class=" d-flex flex-column align-items-start gap-2 gap-md-3 my-5">
           <button data-target="personalDetails" class="btn p-0 fs-5 active">
@@ -70,15 +70,11 @@
      
           
            <!-- -----form------------------- ---------->
-          <form id="form" class="container px-3" novalidate>
+          <form id="form" class="py-3 px-4 px-md-5" novalidate>
             <!----personal details section -->
             
             <div id="personalDetails" class="" >
-              <!-- header buttons -->
-              <div class="">
-                <button type="button" class="py-3  head-btn active"><i class="fas fa-th"></i> Grid View</button>
-                <button type="button" class="py-3  head-btn "><i class="fa-solid fa-list"></i> List View</button>
-              </div>
+              
               
               <!-- profile image -->
               
@@ -86,42 +82,42 @@
                 <p>Applicant's Image:</p>
                 <div class="d-flex flex-column justify-content-center gap-2 ">
                  
-                <label class="rounded-4 border" style="width: 90px;height: 100px;" for="profileimage">
-                    <img id="preview" src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="h-100 w-100 rounded-4 " alt="">
-                </label> 
-                
-                <input type="file"  accept=".jpg,.jpeg,.png,.webp" id="profileimage">
-                <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                  <label class="rounded-4 border" style="width: 90px;height: 100px;" for="profileimage">
+                      <img id="preview" src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="h-100 w-100 rounded-4 " alt="">
+                  </label> 
+                  
+                  <input type="file"  accept=".jpg,.jpeg,.png,.webp" id="profileimage">
+                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                 </div>
                 
               </div>
               <div class="border rounded-3 overflow-hidden">
                  <!-- heading div -->
                  <div class="text-dark border-bottom px-3 py-2" >
-                   Personal Details
+                   New Applicant
                  </div>
-                 <div id="personalInfoForm" class="row row-cols-3 bg-white p-3 text-body-secondary">
+                 <div id="personalInfoForm" class="row row-cols-1 row-cols-md-2 bg-white p-3 text-body-secondary">
                       <div class="mb-3 position-relative">
-                        <label for="firstname" class="form-label">First Name<span class="text-info">&ast;</span></label>
+                        <label for="firstname" class="form-label">First Name<span class="text-danger">&ast;</span></label>
                         <input type="text" class="form-control text-body-secondary" id="firstname" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
-                        <label for="lastname" class="form-label">Last Name<span class="text-info">&ast;</span></label>
+                        <label for="lastname" class="form-label">Last Name<span class="text-danger">&ast;</span></label>
                         <input type="text" class="form-control text-body-secondary  " id="lastname" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
-                        <label for="father" class="form-label">Father's Name<span class="text-info">&ast;</span></label>
+                        <label for="father" class="form-label">Father's Name<span class="text-danger">&ast;</span></label>
                         <input type="text" class="form-control text-body-secondary  " id="father" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
-                        <label for="mother" class="form-label">Mother's Name<span class="text-info">&ast;</span></label>
+                        <label for="mother" class="form-label">Mother's Name<span class="text-danger">&ast;</span></label>
                         <input type="text" class="form-control text-body-secondary  " id="mother" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
-                      <div class="mb-3 position-relative">
+                      <div class="mb-3 position-relative col-md-4">
                         <label for="nationality" class="form-label">Nationality</label>
                         <select class="form-select text-body-secondary  " name="" id="nationality">
                           <option value="">--Nationality--</option>
@@ -130,8 +126,8 @@
                         </select>
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
-                      <div class="mb-3 position-relative">
-                        <label for="sex" class="form-label">Sex<span class="text-info">&ast;</span></label>
+                      <div class="mb-3 position-relative col-md-4">
+                        <label for="sex" class="form-label">Sex<span class="text-danger">&ast;</span></label>
                         <select class="form-select text-body-secondary  " name="" id="sex" >
                           <option value="">--Gender--</option>
                           <option value="male">Male</option>
@@ -140,7 +136,7 @@
                         </select>
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
-                      <div class="mb-3 position-relative">
+                      <div class="mb-3 position-relative col-md-4">
                         <label for="maritalstatus" class="form-label">Marital Status</label>
                         <select class="form-select text-body-secondary  " name="" id="maritalstatus">
                           <option value="">--Marital--</option>
@@ -148,11 +144,6 @@
                           <option value="unmarried">Unmarried</option>
                           <option value="divorced">Divorced</option>
                         </select>
-                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                      </div>
-                      <div class="mb-3 position-relative">
-                        <label for="pannumber" class="form-label">PAN Number</label>
-                        <input type="text" class="form-control text-body-secondary  " id="pannumber" minlength="10" maxlength="10">
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
                       <div class="mb-3 position-relative">
@@ -165,22 +156,31 @@
                         <input type="text" class="form-control text-body-secondary  " id="birthplace" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
-                      <div class="mb-3 position-relative ">
+                      <div class="mb-3 position-relative col-md-4">
                         <label for="telephone" class="form-label">Telephone</label>
                         <input type="number" class="form-control text-body-secondary  " id="telephone" >
                         <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                       </div>
-                      <div class="mb-3 position-relative ">
-                        <label for="mobile" class="form-label">Mobile<span class="text-info">&ast;</span></label>
+                      <div class="mb-3 position-relative col-md-4">
+                        <label for="mobile" class="form-label">Mobile<span class="text-danger">&ast;</span></label>
                           <input type="number"  class="form-control text-body-secondary" id="mobile" maxlength="10">
                           <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                         
                       </div>
-                      <div class="mb-3 position-relative ">
-                        <label for="email" class="form-label">Email<span class="text-info">&ast;</span></label>
+                      <div class="mb-3 position-relative col-md-4">
+                        <label for="email" class="form-label">Email<span class="text-danger">&ast;</span></label>
                           <input type="email" class="form-control text-body-secondary" id="email" autocomplete='off'>
                           <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
                         
+                      </div>
+                      <div class="mb-3 position-relative">
+                        <label for="pannumber" class="form-label">PAN Number</label>
+                        <input type="text" class="form-control text-body-secondary  " id="pannumber" minlength="10" maxlength="10">
+                        <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
+                      </div>
+                      <div class="w-100">
+                         <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Save</button>
+                         <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Reset</button>
                       </div>
                       
                   </div>
@@ -617,10 +617,10 @@
                 
                </div>
              </div>
-             <div>&ast;Required fields.</div>
-             <div>
+             
+             <div class="d-none">
               <button class="btn btn-primary mt-3" type="submit"><span>Submit</span><i class="fa fa-check d-none"></i><i class="fa fa-refresh d-none"></i></button>
-              <button class="btn btn-primary mt-3" type="reset">Reset</button>
+              <button class="btn btn-primary mt-3" type="reset">Cancel</button>
               <a href=""></a>
              </div>
              

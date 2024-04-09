@@ -119,6 +119,15 @@ form.div{
   transition: display 3s ease-in;
 }
 
+.btn-form{
+  background-color: #1a5089;
+  
+}
+.btn-form:hover{
+  background-color: #2669b1;
+  transition: background-color 0.4s ease;
+}
+
 /* set head buttons styles */
 .head-btn{
   border: none;
@@ -177,17 +186,24 @@ form.div{
 
 @media (min-width:767.99px) and (max-width:990px){
     
-    .main {
-        margin-left: 27%;
-    }
+  
     #sidebar{
       width: 27%;
       transition: transform 0.4s ease;
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
   }
 
-@media (min-width:990.22px) {
+@media (min-width:990.22px) and (max-width:1199.98px) {
+    
+   
+    #sidebar{
+      width: 20%;
+      transition: transform 0.4s ease;
+      transform: translateX(-100%);
+    }
+  }
+@media (min-width:1200px)  {
     
     .main {
         margin-left: 20%;
