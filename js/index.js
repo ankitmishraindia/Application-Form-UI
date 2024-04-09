@@ -24,28 +24,6 @@ closeArrow[0].addEventListener('click',()=>{
 
    
 
-
-
-// /////Image uploading preview
-function previewImage(event){
-    let input=event.target;
-    let preview=document.getElementById('preview')
-    let file=input.files[0]
-
-    if(file){
-        let reader=new FileReader()
-        reader.onload=function(){
-            preview.src=reader.result;
-        }
-        reader.readAsDataURL(file)
-    }
-}
-const profileImageInput=document.getElementById('profileimage')
-profileImageInput.addEventListener('change',previewImage)
-
-
-
-
 //////set value of present address to permanent address by checkbox
 const housenoPresent=document.getElementById('housenopst')
 const localityPresent=document.getElementById('localitypst')
@@ -233,7 +211,7 @@ sidebarButtons.forEach(btn=>{
         const targetSection=document.getElementById(targetId)
         if(targetSection){
             //set all sections to hide
-            for(let j=0;j<formChild.length-2;j++){
+            for(let j=0;j<formChild.length;j++){
                 formChild[j].classList.add('trans')
                 formChild[j].classList.add('d-none')
                 
@@ -248,48 +226,26 @@ sidebarButtons.forEach(btn=>{
     })
 })
 
-// set functionality of header button 
+//add functionality in the language butttons
+const languageBtn=document.getElementsByClassName('head-btn')
+const languageDiv=Array.from(document.getElementsByClassName('language-div'))
 
-const headerBtn=Array.from(document.getElementsByClassName('head-btn'))
-
-//set buttotns active state
-headerBtn.forEach(btn=>btn.addEventListener('click',function(){
-    headerBtn.forEach(button=>button.classList.remove('active'))
-    btn.classList.add('active')
-
-    const personalInfoForm=document.getElementById('personalInfoForm');
+for(let k=0;k<2;k++){
+    languageBtn[k].addEventListener('click',()=>{
+        languageDiv.forEach((item)=>item.classList.add('d-none'))
+        languageDiv[k].classList.remove('d-none')
+        for(let l=0;l<languageBtn.length;l++){
+            languageBtn[l].classList.remove('active')
+        }
+        languageBtn[k].classList.add('active')
+    })
+        
     
-    if(btn===headerBtn[1]){
-        personalInfoForm.classList.remove('row')
-        Array.from(personalInfoForm.children).forEach(div=>{
-            div.classList.add('d-flex')
-            div.classList.add('w-50')
-            div.classList.add('justify-content-center')
-        })
-    }
-    if(btn===headerBtn[0]){
-        personalInfoForm.classList.add('row')
-        Array.from(personalInfoForm.children).forEach(div=>div.classList.remove('d-flex'))
-    }
+}
 
-    //   show hide in address section by click on buttons present and permanant
-    if(btn===headerBtn[2]){
-        const addresschild=document.getElementsByClassName('address-child')
-        
-            addresschild[0].classList.remove('d-none')
-        
-        
-        addresschild[1].classList.add('d-none')
-    }
-    if(btn===headerBtn[3]){
-        const addresschild=document.getElementsByClassName('address-child')
-        addresschild[0].classList.add('d-none')
-        addresschild[1].classList.remove('d-none')
-    }
-    
 
-    //
-}))
+
+
 
 })
 

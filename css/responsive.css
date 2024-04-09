@@ -116,7 +116,7 @@ form.div{
 }
 
 .trans{
-  transition: display 3s ease-in;
+  transition: display 3s ease;
 }
 
 .btn-form{
@@ -145,6 +145,10 @@ form.div{
 
 #main{
   transition:margin-left 0.4s ease;
+}
+
+.language-div.active{
+  display: none;
 }
 
 /* Hide the sidebar on extra small screens */

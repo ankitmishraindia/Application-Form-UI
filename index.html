@@ -70,27 +70,11 @@
      
           
            <!-- -----form------------------- ---------->
-          <form id="form" class="py-3 px-4 px-md-5" novalidate>
+          <form id="form" class="" novalidate>
             <!----personal details section -->
             
-            <div id="personalDetails" class="" >
-              
-              
-              <!-- profile image -->
-              
-              <div class="d-none justify-content-between align-items-center rounded-3 bg-white container  overflow-hidden p-3 mt-3">
-                <p>Applicant's Image:</p>
-                <div class="d-flex flex-column justify-content-center gap-2 ">
-                 
-                  <label class="rounded-4 border" style="width: 90px;height: 100px;" for="profileimage">
-                      <img id="preview" src="./assets/240_F_207023483_grCwF7s0J4qbgTWHtUemqWVMhUAsGMXn.jpg" class="h-100 w-100 rounded-4 " alt="">
-                  </label> 
-                  
-                  <input type="file"  accept=".jpg,.jpeg,.png,.webp" id="profileimage">
-                  <span class="position-absolute text-danger error d-none pt-1" style="font-size: 12px;">error</span>
-                </div>
-                
-              </div>
+            <div id="personalDetails" class="py-3 px-4 px-md-5" >
+  
               <div class="border rounded-3 overflow-hidden">
                  <!-- heading div -->
                  <div class="text-dark border-bottom px-3 py-2" >
@@ -191,28 +175,24 @@
             </div>
 
               <!-- ---address section------->
-            <div id="address" class="d-none" >
-                <!-- header buttons -->
-                <div class="">
-                  <button type="button" class="py-3  head-btn  active"><i class="fa-solid fa-location-dot"></i> Present</button>
-                  <button type="button" class="py-3  head-btn "><i class="fa-solid fa-earth-americas"></i> Permanant</button>
-                </div>
+            <div id="address" class="d-none py-3 px-4 px-md-5" >
+
                  <!--Present Address-->
-                <div class="border rounded-3 overflow-hidden mt-5 address-child">
+                <div class="border rounded-3 overflow-hidden address-child">
                    <!-- heading div -->
                    <div class="text-dark border-bottom px-3 py-2" >
-                     Present Address
+                     Present
                    </div>
-                   <div id="personalInfoForm" class="row row-cols-2 bg-white p-3 text-body-secondary">
-                    <div class="mb-1 ">
+                   <div id="personalInfoForm" class="row row-cols-1 row-cols-md-2 bg-white p-3 text-body-secondary">
+                    <div class="mb-3 ">
                       <label for="housenopst" class="form-label">House No.</label>
-                      <input type="text" class="form-control text-body-secondary  " id="housenopst" placeholder="ex. 21B">
+                      <input type="text" class="form-control text-body-secondary  " id="housenopst" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="localitypst" class="form-label">Locality/City</label>
-                      <input type="text" class="form-control text-body-secondary  " id="localitypst" placeholder="ex. Babhnan-bazar">
+                      <input type="text" class="form-control text-body-secondary  " id="localitypst" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="statepst" class="form-label">State</label>
                       <select class="form-select  " name="" id="statepst">
                        
@@ -254,38 +234,38 @@
                             <option value="Puducherry">Puducherry</option>
                       </select>
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="pincodepst" class="form-label">Pincode</label>
-                      <input type="text" class="form-control text-body-secondary  " id="pincodepst" minlength="6" maxlength="6" placeholder="ex. 241212">
+                      <input type="text" class="form-control text-body-secondary  " id="pincodepst" minlength="6" maxlength="6" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="periodstaypst" class="form-label">Period of Stay</label>
-                      <input type="text" class="form-control text-body-secondary  " id="periodstaypst" placeholder="ex. 2 Months">
+                      <input type="text" class="form-control text-body-secondary  " id="periodstaypst" >
                     </div>
                     
                     </div>
                    
                 </div>
                  <!--permanent address section-->
-                <div class="border rounded-3 overflow-hidden mt-5 address-child d-none">
+                <div class="border rounded-3 overflow-hidden mt-4 address-child">
                   <!-- heading div -->
                   <div class="text-dark border-bottom px-3 py-2" >
-                    Permanent Address
+                    Permanent 
                   </div>
                   <div class="d-flex gap-2 bg-white p-3">
                     <input type="checkbox" id="sameaddress" >
                     <label for="sameaddress">Same As Present Address</label>
                   </div>
-                  <div id="personalInfoForm" class="row row-cols-2 bg-white p-3 text-body-secondary">
-                    <div class="mb-1 ">
+                  <div id="personalInfoForm" class="row row-cols-1 row-cols-md-2 bg-white p-3 text-body-secondary">
+                    <div class="mb-3 ">
                       <label for="housenoPmnt" class="form-label">House No.</label>
-                      <input type="text" class="form-control text-body-secondary  " id="housenoPmnt" placeholder="ex. 21B">
+                      <input type="text" class="form-control text-body-secondary  " id="housenoPmnt" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="localityPmnt" class="form-label">Locality/City</label>
-                      <input type="text" class="form-control text-body-secondary  " id="localityPmnt" placeholder="ex. Babhnan-Bazar">
+                      <input type="text" class="form-control text-body-secondary  " id="localityPmnt" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="statePmnt" class="form-label">State</label>
                       <select class="form-select  " name="" id="statePmnt">
                        
@@ -327,14 +307,18 @@
                             <option value="Puducherry">Puducherry</option>
                       </select>
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3">
                       <label for="pincodePmnt" class="form-label">Pincode</label>
-                      <input type="text" class="form-control text-body-secondary  " id="pincodePmnt" minlength="6" maxlength="6" placeholder="ex. 252323">
+                      <input type="text" class="form-control text-body-secondary  " id="pincodePmnt" minlength="6" maxlength="6" >
                     </div>
-                    <div class="mb-1 ">
+                    <div class="mb-3 ">
                       <label for="periodstayPmnt" class="form-label">Period of Stay</label>
-                      <input type="text" class="form-control text-body-secondary  " id="periodstayPmnt" placeholder="ex. 2 Months">
+                      <input type="text" class="form-control text-body-secondary  " id="periodstayPmnt" >
                     </div>
+                    <div class="w-100">
+                      <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Save</button>
+                      <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Reset</button>
+                   </div>
                   </div>
                 </div>
                 
@@ -344,7 +328,7 @@
               <!---- ---Passport section------->
 
              
-            <!-- <h3  class="mt-4"><i class="fa-solid fa-passport"></i> <span class="fs-4 ">Passport Details:</span></h3> -->
+           
             <div id="passport" class="container rounded-3  bg-white p-2 d-none" >
               <div class="d-sm-flex justify-content-between">
                 <div>
@@ -423,81 +407,153 @@
 
 
               <!---- ---Language section------->
-            <!-- <h3  class="mt-4"><i class="fa-solid fa-language"></i> <span class="fs-4 ">Languages:</span></h3> -->
-            <div id="language" class="container rounded-3  bg-white p-2 d-none" >
-              
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
-                <div class="mb-1 ">
-                  <label for="lan2" class="form-label">Language</label>
-                  <input type="text" class="form-control  " id="lan2" placeholder="ex. ENGLISH">
-                </div>
-                <div class="d-flex gap-1">
-                    <div class="mb-1 ">
-                    <label for="lan2read" class="form-label">Read</label>
-                    <select class="form-select  " name="" id="lan2read">
-                      <option value="">Select</option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                    </select>
-                    </div>
-                    <div class="mb-1 ">
-                      <label for="lan2write" class="form-label">Write</label>
-                      <select class="form-select  " name="" id="lan2write">
-                        <option value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                      </select>
-                    </div>
-                    <div class="mb-1 ">
-                      <label for="lan2speak" class="form-label">Speak</label>
-                      <select class="form-select  " name="" id="lan2speak">
-                        <option value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                      </select>
-                  </div>  
-                </div>
-                
+            
+            <div id="language" class="d-none px-4 px-md-5" >
+              <div>
+                <button type="button" class="head-btn active pt-2">
+                  <i class="fas fa-globe"></i>
+                  <span>Languages</span>
+                </button>
+                <button type="button" class="head-btn pt-2 ms-2">
+                  <i class="fas fa-plus"></i>
+                  <span>Add</span>
+                </button>
               </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-lg-3">
-                <div class="mb-1 ">
-                  <label for="lan1" class="form-label">Language</label>
-                  <input type="text" class="form-control  " id="lan1" placeholder="ex. HINDI">
-                </div>
-                <div class="d-flex gap-1 ">
-                    <div class="mb-1 ">
-                    <label for="lan1read" class="form-label">Read</label>
-                    <select class="form-select  " name="" id="lan1read">
-                      <option value="">Select</option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
+              <div class="bg-white rounded-3 p-4 my-5 overflow-x-hidden language-div">
+                <div class="row row-cols-1 mt-2 row-cols-md-2">
+                  <div class="mb-3 ">
+                    <label for="lan2" class="form-label">Language 1</label>
+                    <select class="form-select  " name="" id="lan2">
+                      <option value="">---Language--</option>
+                      <option value="hindi">Hindi</option>
+                      <option value="urdu">Urdu</option>
+                      <option value="punjabi">Punjabi</option>
                     </select>
-                    </div>
-                    <div class="mb-1 ">
-                      <label for="lan1write" class="form-label">Write</label>
-                      <select class="form-select  " name="" id="lan1write">
-                        <option value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                      </select>
-                    </div>
-                    <div class="mb-1 ">
-                      <label for="lan1speak" class="form-label">Speak</label>
-                      <select class="form-select  " name="" id="lan1speak">
-                        <option value="">Select</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                      </select>
-                  </div>  
+                  </div>
+                  <div class="d-flex flex-wrap  gap-1">
+                      <div class="mb-3 ">
+                      <label for="lan2read" class="form-label">Read</label>
+                      <input type="checkbox" class="form-check " id="lan2read">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan2write" class="form-label">Write</label>
+                        <input type="checkbox" class="form-check " id="lan2write">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan2speak" class="form-label">Speak</label>
+                        <input type="checkbox" class="form-check " id="lan2speak">
+                    </div>  
+                  </div>
+                  
                 </div>
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="mb-3">
+                    <label for="lan1" class="form-label">Language 2</label>
+                    <select class="form-select  " name="" id="lan1">
+                      <option value="">---Language--</option>
+                      <option value="hindi">English</option>
+                      <option value="urdu">Arabic</option>
+                      <option value="punjabi">Tamil</option>
+                    </select>
+                  </div>
+                  <div class="d-flex flex-wrap">
+                      <div class="mb-3 ">
+                      <label for="lan1read" class="form-label">Read</label>
+                      <input type="checkbox" class="form-check " id="lan1read">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan1write" class="form-label">Write</label>
+                        <input type="checkbox" class="form-check " id="lan1write">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan1speak" class="form-label">Speak</label>
+                        <input type="checkbox" class="form-check " id="lan1speak">
+                    </div>  
+                  </div>
+                  <div class="w-100">
+                    <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Save</button>
+                    <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Reset</button>
+                 </div>
+                  
+                </div>
+              </div>
+              <!-- add langauage section -->
+              <div class="bg-white rounded-3 p-4 my-5 overflow-x-hidden d-none language-div">
+                <div class="row row-cols-1 mt-2 row-cols-md-2">
+                  <div class="mb-3">
+                    <label for="lan3" class="form-label">Language 3</label>
+                    <input type="text" class="form-control ">
+                  </div>
+                  <div class="d-flex flex-wrap">
+                      <div class="mb-3 ">
+                      <label for="lan3read" class="form-label">Read</label>
+                      <input type="checkbox" class="form-check " id="lan3read">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan3write" class="form-label">Write</label>
+                        <input type="checkbox" class="form-check " id="lan3write">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan3speak" class="form-label">Speak</label>
+                        <input type="checkbox" class="form-check " id="lan3speak">
+                    </div>  
+                  </div>
+                  
+                </div>
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="mb-3">
+                    <label for="lan4" class="form-label">Language 4</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex flex-wrap">
+                      <div class="mb-3 ">
+                      <label for="lan4read" class="form-label">Read</label>
+                      <input type="checkbox" class="form-check " id="lan4read">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan4write" class="form-label">Write</label>
+                        <input type="checkbox" class="form-check " id="lan4write">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan4speak" class="form-label">Speak</label>
+                        <input type="checkbox" class="form-check " id="lan4speak">
+                    </div>  
+                  </div>
+                  
+                </div>
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="mb-3">
+                    <label for="lan5" class="form-label">Language 5</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="d-flex flex-wrap">
+                      <div class="mb-3 ">
+                      <label for="lan5read" class="form-label">Read</label>
+                      <input type="checkbox" class="form-check " id="lan5read">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan5write" class="form-label">Write</label>
+                        <input type="checkbox" class="form-check " id="lan5write">
+                      </div>
+                      <div class="mb-3 ">
+                        <label for="lan5speak" class="form-label">Speak</label>
+                        <input type="checkbox" class="form-check " id="lan5speak">
+                      </div>  
+                    </div>
+                  
+                 </div>
+                 <div class="w-100">
+                  <button type="button" class="border-0 px-3 py-1 rounded-1  text-white btn-form">Add</button>
+                 
+               </div>
                 
               </div>
             </div> 
 
-             <!---- ---family section------->
+             <!---- ---family section----------->
 
              
-             <!-- <h3  class="mt-4"><i class="fa-solid fa-people-group"></i> <span class="fs-4 ">Family Details:</span></h3> -->
+             
              <div id="family" class="container rounded-3  bg-white p-2 d-none" >
                <div class="d-flex flex-wrap justify-content-between ">
                  <div>
@@ -618,11 +674,11 @@
                </div>
              </div>
              
-             <div class="d-none">
+             <!-- <div class="d-none">
               <button class="btn btn-primary mt-3" type="submit"><span>Submit</span><i class="fa fa-check d-none"></i><i class="fa fa-refresh d-none"></i></button>
               <button class="btn btn-primary mt-3" type="reset">Cancel</button>
               <a href=""></a>
-             </div>
+             </div> -->
              
           </form>
           
