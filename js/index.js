@@ -234,10 +234,26 @@ for(let k=0;k<2;k++){
     languageBtn[k].addEventListener('click',()=>{
         languageDiv.forEach((item)=>item.classList.add('d-none'))
         languageDiv[k].classList.remove('d-none')
-        for(let l=0;l<languageBtn.length;l++){
+        for(let l=0;l<2;l++){
             languageBtn[l].classList.remove('active')
         }
         languageBtn[k].classList.add('active')
+    })
+        
+    
+}
+//add functionality in the family section butttons
+const familyBtn=document.getElementsByClassName('family-btn')
+const familyDiv=Array.from(document.getElementsByClassName('family-div'))
+
+for(let k=0;k<2;k++){
+    familyBtn[k].addEventListener('click',()=>{
+        familyDiv.forEach((item)=>item.classList.add('d-none'))
+        familyDiv[k].classList.remove('d-none')
+        for(let l=0;l<2;l++){
+            familyBtn[l].classList.remove('show')
+        }
+        familyBtn[k].classList.add('show')
     })
         
     

@@ -143,13 +143,17 @@ form.div{
     color: rgb(77, 76, 76);
 }
 
+/* family butttons style */
+.family-btn.show{
+  border-top: 3px solid red;
+  color: rgba(255,0,0,0.7);
+}
+
 #main{
   transition:margin-left 0.4s ease;
 }
 
-.language-div.active{
-  display: none;
-}
+
 
 /* Hide the sidebar on extra small screens */
 
