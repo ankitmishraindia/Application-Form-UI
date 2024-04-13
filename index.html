@@ -75,9 +75,9 @@
             
             <div id="personalDetails" class="py-3 px-4 px-md-5" >
   
-              <div class="border rounded-3 overflow-hidden">
+              <div class="border rounded-3 overflow-x-hidden">
                  <!-- heading div -->
-                 <div class="text-dark border-bottom px-3 py-2" >
+                 <div class="text-dark border-bottom px-3 py-2">
                    New Applicant
                  </div>
                  <div id="personalInfoForm" class="row row-cols-1 row-cols-md-2 bg-white p-3 text-body-secondary">
@@ -168,10 +168,7 @@
                       </div>
                       
                   </div>
-              </div>
-             
-             
-              
+              </div>  
             </div>
 
               <!-- ---address section------->
@@ -326,81 +323,84 @@
   
            
               <!---- ---Passport section------->
-
-             
-           
-            <div id="passport" class="container rounded-3  bg-white p-2 d-none" >
-              <div class="d-sm-flex justify-content-between">
-                <div>
-                  <input type="radio" name="passport" id="available" role="button">
-                  <label for="available">Available</label>
+            <div id="passport" class="py-3 px-4 px-md-5 d-none" >
+              <div class="border rounded-3 overflow-x-hidden text-body-secondary">
+                    <!-- heading div -->
+                <div class="text-dark border-bottom p-2" >
+                  Do you have Passport?
                 </div>
-                <div>
-                  <input type="radio" name="passport" id="notavailable" checked role="button">
-                  <label for="notavailable">Not Available</label>
+                <div class="d-sm-flex justify-content-between bg-white p-2 overflow-x-hidden">
+                  <div>
+                    <input type="radio" name="passport" id="available" role="button">
+                    <label for="available">Available</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="passport" id="notavailable" checked role="button">
+                    <label for="notavailable">Not Available</label>
+                  </div>
+                  <div>
+                    <input type="radio" name="passport" id="applied" role="button">
+                    <label for="applied">Applied</label>
+                  </div>
+                  
                 </div>
-                <div>
-                  <input type="radio" name="passport" id="applied" role="button">
-                  <label for="applied">Applied</label>
+                <div class="row row-cols-1   row-cols-md-2 overflow-x-hidden d-none bg-white p-2" id="passportDetail">
+                  <div class="mb-1 ">
+                    <label for="passportno" class="form-label">Number</label>
+                    <input type="number" class="form-control text-body-secondary  " id="passportno">
+                  </div>
+                  <div class="mb-1 ">
+                    <label for="issuedate" class="form-label">Date of Issue</label>
+                    <input type="date" class="form-control  " id="issuedate">
+                  </div>
+                  <div class="mb-1 ">
+                    <label for="expirydate" class="form-label">Date of Expiry</label>
+                    <input type="date" class="form-control   " id="expirydate">
+                  </div>
+                  <div class="mb-1 ">
+                    <label for="issueplace" class="form-label">Place Issue</label>
+                    <input type="text" class="form-control  " id="issueplace">
+                  </div>
+                  
+                  
                 </div>
-                 
-              </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="passportDetail">
-                <div class="mb-1 ">
-                  <label for="passportno" class="form-label">Number</label>
-                  <input type="number" class="form-control text-body-secondary  " id="passportno" placeholder="ex. Z91449100">
+                <div class="row row-cols-1   row-cols-md-2 d-none bg-white p-2 overflow-x-hidden" id="visaBox">
+                  <div class="mb-1 ">
+                    <label for="visa" class="form-label">Do you have valid Visa?</label>
+                  </div>
+                  <div>
+                    <select class="form-select  " name="" id="visa">
+                      <option value="">Select</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="mb-1 ">
-                  <label for="issuedate" class="form-label">Date of Issue</label>
-                  <input type="date" class="form-control  " id="issuedate">
+                <div class="row row-cols-1  row-cols-md-2 d-none visaInfo bg-white overflow-x-hidden p-2">
+                  <div class="mb-1 ">
+                    <label for="visatype" class="form-label">Type of Visa</label>
+                  </div>
+                  <div>
+                    <select class="form-select  " name="" id="visatype">
+                      <option value="">Select Visa type</option>
+                      <option value="student">Student</option>
+                      <option value="employment">Employment</option>
+                      <option value="tourist">Tourist</option>
+                      <option value="buisness">Buisness</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="mb-1 ">
-                  <label for="expirydate" class="form-label">Date of Expiry</label>
-                  <input type="date" class="form-control   " id="expirydate">
-                </div>
-                <div class="mb-1 ">
-                  <label for="issueplace" class="form-label">Place Issue</label>
-                  <input type="text" class="form-control  " id="issueplace" placeholder="Lucknow">
-                </div>
-                
-                
-              </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none" id="visaBox">
-                <div class="mb-1 ">
-                  <label for="visa" class="form-label">Do you have valid Visa?</label>
-                </div>
-                <div>
-                  <select class="form-select  " name="" id="visa">
-                    <option value="">Select</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none visaInfo">
-                <div class="mb-1 ">
-                  <label for="visatype" class="form-label">Type of Visa</label>
-                </div>
-                <div>
-                  <select class="form-select  " name="" id="visatype">
-                    <option value="">Select Visa type</option>
-                    <option value="student">Student</option>
-                    <option value="employment">Employment</option>
-                    <option value="tourist">Tourist</option>
-                    <option value="buisness">Buisness</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row row-cols-1 mt-2 row-cols-sm-2 row-cols-md-3 d-none visaInfo">
-                <div class="mb-1 ">
-                  <label for="travel" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
-                </div>
-                <div>
-                  <select class="form-select  " id="travel" >
-                    <option value="">Select</option>
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                  </select>
+                <div class="row row-cols-1   row-cols-md-2 d-none visaInfo bg-white overflow-x-hidden p-2">
+                  <div class="mb-1 ">
+                    <label for="travel" class="form-label">Are you open to Travel to the USA / Sri Lanka on work for a period of 6 months/less during a year?</label>
+                  </div>
+                  <div>
+                    <select class="form-select  " id="travel" >
+                      <option value="">Select</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+                  </div>
                 </div>
               </div>
             </div> 
